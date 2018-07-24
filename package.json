@@ -1,0 +1,19 @@
+{
+  "name": "kla",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kennyarehart/kla.git"
+  },
+  "author": "kennyarehart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kennyarehart/kla/issues"
+  },
+  "homepage": "https://github.com/kennyarehart/kla#readme"
+}
