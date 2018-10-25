@@ -20,10 +20,6 @@ body {
 	padding: 20px;
 }
 
-nav {
-	float: right;
-}
-
 nav a {
 	padding: 0 1vw;
 	color: #0099cd;
@@ -31,6 +27,8 @@ nav a {
 
 .content-container {
 	text-align: center;
+	/* width: 100%; */
+	/* height: calc(100% * 4); */
 }
 
 .home {
@@ -61,4 +59,9 @@ nav a {
 	height: 700px;
 	background-color: green;
 	border: 2px solid black;
+}
+
+.box img {
+	width: 100%;
+	height: 100%;
 }
