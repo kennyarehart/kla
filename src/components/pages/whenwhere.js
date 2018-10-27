@@ -3,22 +3,25 @@ import React, { Component } from 'react'
 class WhenWhere extends Component {
 	render() {
 		return (
-			<div className="home">
-				<h1>Portland,</h1>
-				<h1>Oregon</h1>
+			<div className="home flex-base">
+				<div id="header" className="layer-1 flex-base">
+					<h2>We're getting married!!!</h2>
 
-				<h2>Saturday</h2>
-				<h3>August 3rd, 2019</h3>
-				<p>6:00 PM - 12:00 AM</p>
+					<div className="flex-base">
+						<div id="location">
+							<h3>Bridal Veil Lakes</h3>
+							<h1>Portland, OR</h1>
+						</div>
 
-				<p>Ceremony Begins at 6 o’clock</p>
-				<p>Cocktail Hour Begins at 7 o’clock</p>
-				<p>Dinner & Dancing commence at 8 o’clock</p>
+						<h2>August 3rd, 2019</h2>
+					</div>
+				</div>
 
-				<h2>Bridal Veil Lakes</h2>
-				<h3>
-					3225 NE Henderson Rd<br />Corbett, OR 97019
-				</h3>
+				<img className="myImg" alt="" />
+
+				<p id="soon" className="layer-1">
+					Full Site Coming Soon...
+				</p>
 			</div>
 		)
 	}
