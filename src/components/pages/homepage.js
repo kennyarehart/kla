@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
-import Observer from 'react-intersection-observer'
+// import Observer from 'react-intersection-observer'
 // import Puppy from '../Puppy'
 
 class Homepage extends Component {
 	render() {
 		return (
 			<div>
+				<h2>We're getting married!!!</h2>
+				<img className="engagement-img postcard" alt="engagement-image" />
 				{/* <Puppy src="./images/puppy-0.jpg" />
 				<Puppy src="./images/puppy-1.jpg" />
 				<Puppy src="./images/puppy-2.jpg" />
