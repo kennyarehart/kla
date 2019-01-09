@@ -3,7 +3,27 @@ import React, { Component } from 'react'
 class WhenWhere extends Component {
 	render() {
 		return (
-			<div className="home">
+			<div className="home flex-base">
+				<div id="header" className="flex-base">
+					<h2>We're getting married!!!</h2>
+					<div className="flex-base">
+						<div id="location">
+							<h3>Bridal Veil Lakes</h3>
+							<h1>Portland, OR</h1>
+						</div>
+						<h2>August 3rd, 2019</h2>
+					</div>
+				</div>
+				<img className="myImg" alt="" />
+			</div>
+		)
+	}
+}
+
+export default WhenWhere
+
+/*
+<div className="home">
 				<h1>Portland,</h1>
 				<h1>Oregon</h1>
 
@@ -20,8 +40,4 @@ class WhenWhere extends Component {
 					3225 NE Henderson Rd<br />Corbett, OR 97019
 				</h3>
 			</div>
-		)
-	}
-}
-
-export default WhenWhere
+*/
