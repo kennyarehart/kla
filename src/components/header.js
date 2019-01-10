@@ -6,12 +6,17 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="App-header">
-				<h1>Ashley Weber + Kenny Arehart</h1>
+				{/* TODO - toggle to just first names on mobile */}
+				<Link to="/">
+					<h1>
+						Ashley Weber +<br className="mobile-br" /> Kenny Arehart
+					</h1>
+				</Link>
 				{/*
 				<img src={logo} className="App-logo" alt="logo" />
 				*/}
 				<nav>
-					<Link to="/">Home / Our Story</Link>
+					{/* <Link to="/">Home / Our Story</Link> */}
 					<Link to="/when-where">When & Where</Link>
 					<Link to="/accomodation">Accomodations</Link>
 					{/* <Link to="/registry">Registry</Link>

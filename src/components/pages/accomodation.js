@@ -1,46 +1,73 @@
 import React, { Component } from 'react'
+import hotels from '../../data/hotels.json'
 
 class Accomodation extends Component {
+	// constructor(props) {
+	// 	super(props)
+
+	// }
+	sortRooms(pool) {
+		var prices = []
+		var labels = []
+		pool.map(val => {
+			prices.push(val.price)
+			labels.push(val.label)
+		})
+		console.log('sortRooms()', pool)
+		return [prices, labels]
+	}
 	render() {
 		return (
 			<div>
-				<h3>Accommodations</h3>
-				<p>
-					WE'VE RESERVED GROUP RATES AT THE TWO BELOW HOTELS. JUST MENTION "WEBER/AREHART WEDDING" WHEN
-					BOOKING.
+				<h2>Accommodations</h2>
+				<p className="multi">
+					We've reserved group rates at the two below hotels. Just mention "Weber/Arehart Wedding" when
+					booking.
+					<br />
+					Both hotels are just a quick 15 min ride away from the venue and located close to each other.
+					However, if you wish to book alternate accommodations in the Troutdale, Bridal Veil, Hood River or
+					even Portland areas, feel free!
+					<br />
+					<b>NOTE:</b> The Columbia River Gorge is a <i>very</i> popular location for summer weddings. We have
+					a certain number of rooms blocked out but beyond that things will book very quickly.
 				</p>
-				<p>
-					Both hotels are just a quick 10/15 min cab or Uber ride away from the airport, and located close to
-					each other. However, if you wish to book alternate hotel accommodations in the San Antonio Pearl or
-					River Walk areas, feel free!
-				</p>
+				<br />
 				<div id="hotels-holder">
-					<div>
-						<div>
-							<i>Comfort Inn Troutdale</i>
-						</div>
-						<div>1000 Northwest Graham Road</div>
-						<div>Troutdale, OR 97060</div>
-						<div>Contact | Stephanie Madrigal</div>
-						<div>gm@citroutdale.com</div>
-						<div>(503) 492-2900</div>
-						<div>$### | Classic King</div>
-						<div>$### | Landmark Double Queen</div>
-						<button>VIEW</button>
-					</div>
-					<div>
-						<div>
-							<i>Comfort Inn 136</i>
-						</div>
-						<div>E Greyson St</div>
-						<div>San Antonio, TX 78215</div>
-						<div>Contact | Christina Garza</div>
-						<div>Christina.garza@thehotelemma.com </div>
-						<div>(210) 448-8330</div>
-						<div>$319 | Classic King</div>
-						<div>$349 | Landmark Double Queen</div>
-						<button>VIEW</button>
-					</div>
+					{hotels.options.map((o, i) => {
+						return (
+							<div key={i} className="hotel-single">
+								<h3>
+									<i>{o.name}</i>
+								</h3>
+								<p className="hotel-chunk">
+									{o.address[0]}
+									<br />
+									{o.address[1]}
+								</p>
+								<p className="hotel-chunk">
+									Contact | {o.contact.name}
+									<br />
+									{o.contact.email}
+									<br />
+									{o.contact.phone}
+								</p>
+
+								<div className="dual-column">
+									{this.sortRooms(o.rooms).map((val, k) => {
+										return (
+											<div key={k}>
+												<ul>
+													{val.map((str, n) => {
+														return <li key={n}>{str}</li>
+													})}
+												</ul>
+											</div>
+										)
+									})}
+								</div>
+							</div>
+						)
+					})}
 				</div>
 			</div>
 		)

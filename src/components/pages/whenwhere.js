@@ -3,34 +3,54 @@ import React, { Component } from 'react'
 class WhenWhere extends Component {
 	render() {
 		return (
-			<div className="home">
+			<div className="when-where-page">
 				<div>
-					<img className="bridal-img postcard" alt="bridal-veil-image" />
+					<img className="bridal-img postcard" alt="bridal-veil" />
 					<h2>WEDDING CEREMONY</h2>
-					<p>August 3rd, 2019</p>
-					<p>Bridal Veil Lakes</p>
-					<p>3255 NE Henderson Rd,</p>
-					<p>Corbett, OR 97019</p>
+					<p>
+						August 3rd, 2019
+						<br />
+						Bridal Veil Lakes
+						<br />
+						3255 NE Henderson Rd,
+						<br />
+						Corbett, OR 97019
+					</p>
 					<h3>About Bridal Veil Lakes</h3>
 					<p>
-						The Old Schoolhouse is an event space located at the heart of the Willamette Valley wine region
-						in Newberg, Oregon. Built in 1928 and filled with unbelievable views of hills and orchards. Only
-						a 45-minute drive from downtown Portland, it is well located, minutes away from some of our
-						favourite and the most famous wineries.
+						Overlooking the Historic Columbia River Gorge, Bridal Veil Lakes is located just 30 minutes east
+						of Portland, off exit 28 on I-84. Towering old growth forests surround the 3 acre spring fed
+						lake. The private recreational area is filled with lush greenery and gardens, beautiful
+						wildflowers and breathtaking views. The secluded location is protected from the east wind. Spend
+						the day in a relaxed and enchanting atmosphere.
 					</p>
-					<h3>DAY OF TIMELINE</h3>
-					<ul>
-						<li>5:00 pm - Guests Arrive</li>
-						<li>5:30 pm - 6:00 pm - Ceremony</li>
-						<li>6:00 pm - 7:00 pm - Photos, Bubbles, and Toasts</li>
-						<li>7:00 pm - 12:00 pm - Reception, Buffet, and Dancing</li>
-					</ul>
-					<p>
-						The Ceremony and Reception will be held inside the ballroom. There will also be food, drinks,
-						and games outside- weather permitting.
-					</p>
-
+					<br />
 					<a>GET DIRECTIONS</a>
+					<br /> <br />
+					<h3>DAY OF TIMELINE</h3>
+					<div className="dual-column">
+						<div>
+							<ul>
+								<li>5:00 pm</li>
+								<li>5:30 - 6:00 pm</li>
+								<li>6:00 - 7:00 pm</li>
+								<li>7:00 - 12:00 pm</li>
+							</ul>
+						</div>
+						<div>
+							<ul>
+								<li>Guests Arrive</li>
+								<li>Ceremony</li>
+								<li>Cocktail Hour & Photos</li>
+								<li>Reception, Dinner, & Dancing</li>
+							</ul>
+						</div>
+					</div>
+					<br />
+					<p>
+						The Ceremony will be outdoors on grass with the Reception to follow with seating & dance floor
+						in open air tents.
+					</p>
 				</div>
 			</div>
 		)

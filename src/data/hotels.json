@@ -1,0 +1,44 @@
+{
+	"options": [
+		{
+			"name": "Comfort Inn Troutdale",
+			"address": ["1000 Northwest Graham Road", "Troutdale, OR 97060"],
+			"contact": {
+				"name": "Stephanie Madrigal",
+				"email": "gm@citroutdale.com",
+				"phone": "(503) 492-2900",
+				"url:": "https://www.comfortinntroutdale.com/"
+			},
+			"rooms": [
+				{
+					"price": "$166",
+					"label": "Classic King"
+				},
+				{
+					"price": "$175",
+					"label": "Double Queen"
+				}
+			]
+		},
+		{
+			"name": "Holiday Inn Express Troutdale",
+			"address": ["1000 Northwest Graham Road", "Troutdale, OR 97060"],
+			"contact": {
+				"name": "Stephanie Madrigal",
+				"email": "gm@citroutdale.com",
+				"phone": "(503) 492-2900",
+				"url:": "https://www.ihg.com/holidayinnexpress/hotels/us/en/troutdale/ttdtd/hoteldetail"
+			},
+			"rooms": [
+				{
+					"price": "$166",
+					"label": "Classic King"
+				},
+				{
+					"price": "$175",
+					"label": "Double Queen"
+				}
+			]
+		}
+	]
+}

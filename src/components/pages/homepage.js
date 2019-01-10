@@ -5,9 +5,9 @@ import React, { Component } from 'react'
 class Homepage extends Component {
 	render() {
 		return (
-			<div>
+			<div className="home-page">
 				<h2>We're getting married!!!</h2>
-				<img className="engagement-img postcard" alt="engagement-image" />
+				<img className="engagement-img postcard" alt="engagement" />
 				{/* <Puppy src="./images/puppy-0.jpg" />
 				<Puppy src="./images/puppy-1.jpg" />
 				<Puppy src="./images/puppy-2.jpg" />
