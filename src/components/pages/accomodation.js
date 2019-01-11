@@ -24,16 +24,15 @@ class Accomodation extends Component {
 					However, if you wish to book alternate accommodations in the Troutdale, Bridal Veil, Hood River or
 					even Portland areas, feel free!
 					<br />
-					<b>NOTE:</b> The Columbia River Gorge is a <i>very</i> popular location for summer weddings. We have
-					a certain number of rooms blocked out but beyond that things will book very quickly.
+					<b>NOTE:</b> The Columbia River Gorge is a <i>very</i> popular location for summer weddings and
+					concertes at Edgefield just down the road. We have a certain number of rooms blocked out but beyond
+					that things will book very quickly.
 				</p>
 				<div id="hotels-holder">
 					{hotels.options.map((o, i) => {
 						return (
 							<div key={i} className="hotel-single">
-								<h3>
-									<i>{o.name}</i>
-								</h3>
+								<h3>{o.name}</h3>
 								<p className="hotel-chunk">
 									{o.address[0]}
 									<br />

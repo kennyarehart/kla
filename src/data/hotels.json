@@ -22,21 +22,17 @@
 		},
 		{
 			"name": "Holiday Inn Express Troutdale",
-			"address": ["1000 Northwest Graham Road", "Troutdale, OR 97060"],
+			"address": ["477NW Phoenix Dr", "Troutdale, OR 97060"],
 			"contact": {
-				"name": "Stephanie Madrigal",
-				"email": "gm@citroutdale.com",
-				"phone": "(503) 492-2900",
+				"name": "TBD",
+				"email": "email TBD",
+				"phone": "(503) 669-6500",
 				"url:": "https://www.ihg.com/holidayinnexpress/hotels/us/en/troutdale/ttdtd/hoteldetail"
 			},
 			"rooms": [
 				{
-					"price": "$166",
+					"price": "$189",
 					"label": "Classic King"
-				},
-				{
-					"price": "$175",
-					"label": "Double Queen"
 				}
 			]
 		}
