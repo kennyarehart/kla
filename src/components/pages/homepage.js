@@ -7,17 +7,6 @@ class Homepage extends Component {
 				<h2>We're getting married!!!</h2>
 				<img className="engagement-img postcard" alt="engagement" />
 				<br />
-				<h3>------</h3>
-				<br />
-				<br />
-				<h3>----</h3>
-				<br />
-				<br />
-				<h3>=============</h3>
-				<br />
-				<br />
-				<h3>~~~~~~~~~~~~~~~~~~~~~~~~~~</h3>
-				<br />
 			</div>
 		)
 	}

@@ -41,52 +41,51 @@ class App extends Component {
 				hasMoreItems: false
 			})
 		}
-		console.log('page:', page)
 	}
 
-	// render() {
-	// 	console.log('RENDER', this.state)
-	// 	const loader = (
-	// 		<div className="loader" key={'loader'}>
-	// 			Loading ...
-	// 		</div>
-	// 	)
-
-	// 	var selectedItems = items.slice(0, this.state.count)
-
-	// 	return (
-	// 		<Router>
-	// 			<div className="App">
-	// 				<Header />
-	// 				<InfiniteScroll
-	// 					pageStart={0}
-	// 					loadMore={this.loadItems.bind(this)}
-	// 					hasMore={this.state.hasMoreItems}
-	// 					loader={loader}
-	// 				>
-	// 					<div className="tracks">{selectedItems}</div>
-	// 				</InfiniteScroll>
-	// 			</div>
-	// 		</Router>
-	// 	)
-	// }
 	render() {
+		console.log('RENDER', this.state)
+		const loader = (
+			<div className="loader" key={'loader'}>
+				Loading ...
+			</div>
+		)
+		var selectedItems = items.slice(0, this.state.count)
 		return (
 			<Router>
 				<div className="App">
 					<Header />
 					<div className="content-container">
-						<Route exact path="/" component={Homepage} />
-						<Route exact path="/when-where" component={WhenWhere} />
-						<Route exact path="/accomodation" component={Accomodation} />
-						<Route exact path="/registry" component={Registry} />
-						<Route exact path="/in-town" component={InTown} />
-						<Route exact path="/gallery" component={Gallery} />
+						<InfiniteScroll
+							pageStart={0}
+							loadMore={this.loadItems.bind(this)}
+							hasMore={this.state.hasMoreItems}
+							loader={loader}
+						>
+							<div>{selectedItems}</div>
+						</InfiniteScroll>
 					</div>
 				</div>
 			</Router>
 		)
 	}
+	// render() {
+	// 	return (
+	// 		<Router>
+	// 			<div className="App">
+	// 				<Header />
+	// 				<div className="content-container">
+	// 					<Route exact path="/" component={Homepage} />
+	// 					<Route exact path="/when-where" component={WhenWhere} />
+	// 					<Route exact path="/accomodation" component={Accomodation} />
+	// 					<Route exact path="/registry" component={Registry} />
+	// 					<Route exact path="/in-town" component={InTown} />
+	// 					<Route exact path="/gallery" component={Gallery} />
+	// 				</div>
+	// 			</div>
+	// 		</Router>
+	// 	)
+	// }
 }
 
 export default App

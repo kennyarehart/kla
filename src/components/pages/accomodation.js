@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import hotels from '../../data/hotels.json'
 
 class Accomodation extends Component {
-	// constructor(props) {
-	// 	super(props)
-
-	// }
 	sortRooms(pool) {
 		var prices = []
 		var labels = []
@@ -18,11 +14,11 @@ class Accomodation extends Component {
 	}
 	render() {
 		return (
-			<div>
+			<div className="accomodations-page buffered-content">
 				<h2>Accommodations</h2>
 				<p className="multi">
-					We've reserved group rates at the two below hotels. Just mention "Weber/Arehart Wedding" when
-					booking.
+					We've reserved group rates at the two below hotels. Just mention{' '}
+					<span className="wedding-name">"Weber/Arehart Wedding"</span> when booking.
 					<br />
 					Both hotels are just a quick 15 min ride away from the venue and located close to each other.
 					However, if you wish to book alternate accommodations in the Troutdale, Bridal Veil, Hood River or
@@ -31,7 +27,6 @@ class Accomodation extends Component {
 					<b>NOTE:</b> The Columbia River Gorge is a <i>very</i> popular location for summer weddings. We have
 					a certain number of rooms blocked out but beyond that things will book very quickly.
 				</p>
-				<br />
 				<div id="hotels-holder">
 					{hotels.options.map((o, i) => {
 						return (
