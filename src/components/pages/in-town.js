@@ -6,6 +6,7 @@ class InTown extends Component {
 			<div>
 				InTown page text
 				<div>Sub content</div>
+				<img className="dummy-img postcard" alt="dummy" />
 			</div>
 		)
 	}

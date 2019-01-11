@@ -9,7 +9,7 @@ class Accomodation extends Component {
 	sortRooms(pool) {
 		var prices = []
 		var labels = []
-		pool.map(val => {
+		pool.forEach(val => {
 			prices.push(val.price)
 			labels.push(val.label)
 		})

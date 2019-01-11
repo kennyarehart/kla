@@ -58,23 +58,3 @@ class WhenWhere extends Component {
 }
 
 export default WhenWhere
-
-/*
-<div className="home">
-				<h1>Portland,</h1>
-				<h1>Oregon</h1>
-
-				<h2>Saturday</h2>
-				<h3>August 3rd, 2019</h3>
-				<p>6:00 PM - 12:00 AM</p>
-
-				<p>Ceremony Begins at 6 o’clock</p>
-				<p>Cocktail Hour Begins at 7 o’clock</p>
-				<p>Dinner & Dancing commence at 8 o’clock</p>
-
-				<h2>Bridal Veil Lakes</h2>
-				<h3>
-					3225 NE Henderson Rd<br />Corbett, OR 97019
-				</h3>
-			</div>
-*/
