@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-// import logo from '../logo.svg'
 import Device from './device'
+import sections from '../data/sections.json'
 
 class Header extends Component {
+	createLinks = () => {
+		return sections.active.map((val, i) => {
+			return (
+				<Link to={val.path} key={i}>
+					{val.label}
+				</Link>
+			)
+		})
+	}
 	render() {
 		return (
 			<div className="App-header">
@@ -12,19 +21,7 @@ class Header extends Component {
 						Ashley Weber +<br className="mobile-br" /> Kenny Arehart
 					</h1>
 				</Link>
-				{/*
-				<img src={logo} className="App-logo" alt="logo" />
-				*/}
-				{Device.type === 'mobile' ? null : (
-					<nav>
-						{/* <Link to="/">Home / Our Story</Link> */}
-						<Link to="/when-where">When & Where</Link>
-						<Link to="/accomodation">Accomodations</Link>
-						{/* <Link to="/registry">Registry</Link>
-						<Link to="/in-town">Fun in Oregon</Link>
-						<Link to="/gallery">Gallery</Link> */}
-					</nav>
-				)}
+				{Device.type === 'mobile' ? null : <nav>{this.createLinks()}</nav>}
 			</div>
 		)
 	}

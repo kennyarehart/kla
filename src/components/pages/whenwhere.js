@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import MapContainer from '../map-container'
+import bridalveil from '../../images/bridalveil.jpg'
+// import MapContainer from '../map-container'
 
 class WhenWhere extends Component {
 	render() {
@@ -20,12 +21,12 @@ class WhenWhere extends Component {
 							</span>
 						</p>
 					</div>
-					<img className="bridal-img postcard" alt="bridal-veil" />
+					<img src={bridalveil} className="large-img postcard" alt="bridal-veil" />
 
 					<div className="buffered-content">
 						{/* <MapContainer /> */}
 						<h3>About Bridal Veil Lakes</h3>
-						<p className="end-capped">
+						<p className="end-capped max-wide">
 							Overlooking the Historic Columbia River Gorge, Bridal Veil Lakes is located just 30 minutes
 							east of Portland, off exit 28 on I-84. Towering old growth forests surround the 3 acre
 							spring fed lake. The private recreational area is filled with lush greenery and gardens,

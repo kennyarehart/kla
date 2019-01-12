@@ -1,6 +1,6 @@
 class Device {
 	constructor() {
-		console.log('Device()')
+		// console.log('Device()')
 		const D = this
 		D.agentString = navigator.userAgent
 

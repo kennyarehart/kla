@@ -9,14 +9,13 @@ class Accomodation extends Component {
 			prices.push(val.price)
 			labels.push(val.label)
 		})
-		console.log('sortRooms()', pool)
 		return [prices, labels]
 	}
 	render() {
 		return (
 			<div className="accomodations-page buffered-content">
 				<h2>Accommodations</h2>
-				<p className="multi">
+				<p className="multi max-wide">
 					We've reserved group rates at the two below hotels. Just mention{' '}
 					<span className="wedding-name">"Weber/Arehart Wedding"</span> when booking.
 					<br />

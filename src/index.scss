@@ -31,6 +31,10 @@ body,
 	a {
 		text-decoration: none;
 	}
+	h1 {
+		font-size: 5em;
+		margin-bottom: 2vw;
+	}
 }
 
 .buffered-content {
@@ -79,15 +83,13 @@ nav {
 }
 
 /* ---------------------------------------------- */
-
 h1 {
-	font-size: 3em;
 	color: $colorMid;
-	margin-bottom: 1vw;
 	font-family: 'Cabin Sketch', Arial;
 }
 
 h2 {
+	font-size: 3em;
 	color: $colorMid;
 	margin: 1em;
 	font-family: 'Amatic SC', Arial;
@@ -104,7 +106,7 @@ p {
 	line-height: 1.5em;
 }
 
-p.end-capped {
+.end-capped {
 	padding-bottom: 2em;
 }
 
@@ -112,6 +114,11 @@ p.multi {
 	br {
 		line-height: 3em;
 	}
+}
+
+.max-wide {
+	max-width: 900px;
+	margin: auto;
 }
 
 ul {
@@ -147,14 +154,7 @@ ul {
 	display: flex;
 }
 
-.bridal-img {
-	content: url('./images/bridalveil.jpg');
-	max-width: 100%;
-	margin-bottom: 1em;
-}
-
-.engagement-img {
-	content: url('./images/engagement_pic.jpg');
+.large-img {
 	max-width: 100%;
 }
 
@@ -175,9 +175,11 @@ ul {
 #hotels-holder {
 	display: flex;
 	align-content: center;
-	align-items: center;
+	align-items: flex-start;
 	flex-direction: row;
 	justify-content: space-around;
+	max-width: 700px;
+	margin: auto;
 
 	.hotel-single {
 		margin-bottom: 2em;
@@ -191,6 +193,16 @@ ul {
 	display: none;
 }
 
+/* iPad */
+@media only screen and (min-device-width: 768px) {
+	.App-header {
+		h1 {
+			font-size: 4em;
+		}
+	}
+}
+
+/* Mobile */
 @media only screen and (max-device-width: 700px) {
 	body {
 		/*background-image: url('./images/engagement_mobile.jpg');
@@ -207,10 +219,12 @@ ul {
 	}
 	#hotels-holder {
 		display: block;
+		max-width: 100%;
 	}
 
 	.App-header {
 		h1 {
+			font-size: 3em;
 			margin-top: 0.6em;
 			margin-bottom: 0.3em;
 		}
