@@ -10,15 +10,12 @@ import Gallery from './components/pages/gallery'
 
 import InfiniteScroll from 'react-infinite-scroller'
 import Device from './components/device'
+import sections from './data/sections.json'
 
-const items = [
-	<Homepage key={0} />,
-	<WhenWhere key={1} />,
-	<Accomodation key={2} />,
-	<Registry key={3} />,
-	<InTown key={4} />,
-	<Gallery key={5} />
-]
+const classes = { Homepage, WhenWhere, Accomodation, Registry, InTown, Gallery }
+function dynamicClass(name) {
+	return classes[name]
+}
 
 class App extends Component {
 	constructor(props) {
@@ -33,7 +30,7 @@ class App extends Component {
 	loadItems(page) {
 		var T = this
 
-		if (T.state.count < items.length) {
+		if (T.state.count < sections.active.length) {
 			T.setState({
 				count: page
 			})
@@ -46,7 +43,7 @@ class App extends Component {
 
 	render() {
 		let loader
-		let selectedItems
+		let selectedItems = []
 		const isMobile = Device.type === 'mobile'
 		if (isMobile) {
 			loader = (
@@ -54,7 +51,15 @@ class App extends Component {
 					Loading ...
 				</div>
 			)
-			selectedItems = items.slice(0, this.state.count)
+			for (var i = 0; i < this.state.count; i++) {
+				var item = sections.active[i]
+				var Temp = dynamicClass(item.class)
+				selectedItems.push(<Temp key={item.label} />)
+			}
+		} else {
+			selectedItems = sections.active.map((item, i) => {
+				return <Route exact path={item.path} component={dynamicClass(item.class)} key={item.label} />
+			})
 		}
 		return (
 			<Router>
@@ -71,14 +76,7 @@ class App extends Component {
 								<div>{selectedItems}</div>
 							</InfiniteScroll>
 						) : (
-							<div>
-								<Route exact path="/" component={Homepage} />
-								<Route exact path="/when-where" component={WhenWhere} />
-								<Route exact path="/accomodation" component={Accomodation} />
-								<Route exact path="/registry" component={Registry} />
-								<Route exact path="/in-town" component={InTown} />
-								<Route exact path="/gallery" component={Gallery} />
-							</div>
+							<div>{selectedItems}</div>
 						)}
 					</div>
 				</div>
