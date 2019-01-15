@@ -10,7 +10,7 @@ import Gallery from './components/pages/gallery'
 
 import InfiniteScroll from 'react-infinite-scroller'
 import Device from './components/device'
-import sections from './data/sections.json'
+import siteData from './data/siteData.json'
 
 const classes = { Homepage, WhenWhere, Accomodation, Registry, InTown, Gallery }
 function dynamicClass(name) {
@@ -30,7 +30,7 @@ class App extends Component {
 	loadItems(page) {
 		var T = this
 
-		if (T.state.count < sections.active.length) {
+		if (T.state.count < siteData.sections.active.length) {
 			T.setState({
 				count: page
 			})
@@ -52,19 +52,19 @@ class App extends Component {
 				</div>
 			)
 			for (var i = 0; i < this.state.count; i++) {
-				var item = sections.active[i]
+				var item = siteData.sections.active[i]
 				var Temp = dynamicClass(item.class)
 				selectedItems.push(<Temp key={item.label} />)
 			}
 		} else {
-			selectedItems = sections.active.map((item, i) => {
+			selectedItems = siteData.sections.active.map((item, i) => {
 				return <Route exact path={item.path} component={dynamicClass(item.class)} key={item.label} />
 			})
 		}
 		return (
 			<Router>
 				<div className="App">
-					<Header />
+					{/* <Header /> */}
 					<div className="content-container">
 						{isMobile ? (
 							<InfiniteScroll

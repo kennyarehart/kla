@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import hotels from '../../data/hotels.json'
+import siteData from '../../data/siteData.json'
 
 class Accomodation extends Component {
 	sortRooms(pool) {
@@ -28,7 +28,7 @@ class Accomodation extends Component {
 					that things will book very quickly.
 				</p>
 				<div id="hotels-holder">
-					{hotels.options.map((o, i) => {
+					{siteData.hotels.map((o, i) => {
 						return (
 							<div key={i} className="hotel-single">
 								<h3>{o.name}</h3>
@@ -40,7 +40,7 @@ class Accomodation extends Component {
 								<p className="hotel-chunk">
 									Contact | {o.contact.name}
 									<br />
-									{o.contact.email}
+									<a href="mailto:{o.contact.email}">{o.contact.email}</a>
 									<br />
 									{o.contact.phone}
 								</p>

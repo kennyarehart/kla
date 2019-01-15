@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Device from './device'
-import sections from '../data/sections.json'
+import siteData from '../data/siteData.json'
 
 class Header extends Component {
 	createLinks = () => {
-		return sections.active.map((val, i) => {
+		return siteData.sections.active.map((val, i) => {
 			return (
 				<Link to={val.path} key={i}>
 					{val.label}

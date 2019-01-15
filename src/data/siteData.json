@@ -1,0 +1,102 @@
+{
+	"sections": {
+		"active": [
+			{
+				"label": "",
+				"class": "Homepage",
+				"path": "/"
+			},
+			{
+				"label": "When & Where",
+				"class": "WhenWhere",
+				"path": "/when-where"
+			},
+			{
+				"label": "Accomodations",
+				"class": "Accomodation",
+				"path": "/accomodation"
+			}
+		],
+		"disabled": [
+			{
+				"label": "Fun in Oregon",
+				"class": "InTown",
+				"path": "/in-town"
+			},
+			{
+				"label": "Registry",
+				"class": "Registry",
+				"path": "/registry"
+			},
+			{
+				"label": "Gallery",
+				"class": "Gallery",
+				"path": "/gallery"
+			}
+		]
+	},
+	"story": {
+		"images": [
+			{
+				"mobile": "standing_open.jpg",
+				"thumb": "standing_open__thumb.jpg"
+			},
+			{
+				"mobile": "standing_embraced.jpg",
+				"thumb": "standing_embraced__thumb.jpg"
+			},
+			{
+				"mobile": "sit_ukulele.jpg",
+				"thumb": "sit_ukulele__thumb.jpg"
+			},
+			{
+				"mobile": "hop_on_back.jpg",
+				"thumb": "hop_on_back__thumb.jpg"
+			}
+		],
+		"text": [
+			[{ "text": "First top line", "x": 0, "y": 0 }, { "text": "First bottom line", "x": 0, "y": 0 }],
+			[{ "text": "second line", "x": 0, "y": 0 }],
+			[{ "text": "third line", "x": 0, "y": 0 }],
+			[{ "text": "forth line", "x": 0, "y": 0 }]
+		]
+	},
+	"hotels": [
+		{
+			"name": "Comfort Inn Troutdale",
+			"address": ["1000 Northwest Graham Road", "Troutdale, OR 97060"],
+			"contact": {
+				"name": "Stephanie Madrigal",
+				"email": "gm@citroutdale.com",
+				"phone": "(503) 492-2900",
+				"url:": "https://www.comfortinntroutdale.com/"
+			},
+			"rooms": [
+				{
+					"price": "$166",
+					"label": "Classic King"
+				},
+				{
+					"price": "$175",
+					"label": "Double Queen"
+				}
+			]
+		},
+		{
+			"name": "Holiday Inn Express Troutdale",
+			"address": ["477NW Phoenix Dr", "Troutdale, OR 97060"],
+			"contact": {
+				"name": "Art Trafton",
+				"email": "atrafton@gorgehotels.com",
+				"phone": "(503) 669-6500",
+				"url:": "https://www.ihg.com/holidayinnexpress/hotels/us/en/troutdale/ttdtd/hoteldetail"
+			},
+			"rooms": [
+				{
+					"price": "$189",
+					"label": "Classic King"
+				}
+			]
+		}
+	]
+}

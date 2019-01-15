@@ -104,6 +104,13 @@ h3 {
 
 p {
 	line-height: 1.5em;
+	a {
+		color: $colorMid;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $colorComp;
+	}
 }
 
 .end-capped {
@@ -192,6 +199,29 @@ ul {
 .mobile-br {
 	display: none;
 }
+
+/* ---------------------------------------------- */
+// STORY
+.story {
+	// position: relative;
+	// height: 100%;
+
+	.gallery {
+		overflow: auto;
+		white-space: nowrap;
+		// position: absolute;
+
+		img {
+			width: 100%;
+			display: inline-block;
+		}
+	}
+	button {
+		// position: absolute;
+	}
+}
+
+/* ---------------------------------------------- */
 
 /* iPad */
 @media only screen and (min-device-width: 768px) {

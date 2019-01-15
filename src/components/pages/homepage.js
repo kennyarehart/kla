@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import engagement from '../../images/engagement.jpg'
+import Story from '../story'
 
 class Homepage extends Component {
 	render() {
 		return (
 			<div className="home-page">
-				<h2>We're getting married!!!</h2>
+				{/* <h2>We're getting married!!!</h2>
 				<img src={engagement} className="large-img postcard" alt="engagement" />
-				<br />
+				<br /> */}
+
+				<Story />
 			</div>
 		)
 	}
