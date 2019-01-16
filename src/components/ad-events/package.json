@@ -1,0 +1,69 @@
+{
+  "_from": "@ff0000-ad-tech/ad-events@^1.1.3",
+  "_id": "@ff0000-ad-tech/ad-events@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-Gf3ObeVqcGTsnA7aA8sXZI6QN/g2URiqWQCs8Qn8epHr2cMRgr1Nv3/Den4jsSrjii2rxzk+HzLclEW6URj0mQ==",
+  "_location": "/@ff0000-ad-tech/ad-events",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@ff0000-ad-tech/ad-events@^1.1.3",
+    "name": "@ff0000-ad-tech/ad-events",
+    "escapedName": "@ff0000-ad-tech%2fad-events",
+    "scope": "@ff0000-ad-tech",
+    "rawSpec": "^1.1.3",
+    "saveSpec": null,
+    "fetchSpec": "^1.1.3"
+  },
+  "_requiredBy": [
+    "/@ff0000-ad-tech/ad-canvas",
+    "/@ff0000-ad-tech/ad-control",
+    "/@ff0000-ad-tech/ad-dates",
+    "/@ff0000-ad-tech/ad-legacy",
+    "/@ff0000-ad-tech/ad-ui",
+    "/@ff0000-ad-tech/ad-video",
+    "/@ff0000-ad-tech/ad-view"
+  ],
+  "_resolved": "https://registry.npmjs.org/@ff0000-ad-tech/ad-events/-/ad-events-1.2.0.tgz",
+  "_shasum": "cc0d94274014cc310dda2e9ad8f531f0863d3826",
+  "_spec": "@ff0000-ad-tech/ad-events@^1.1.3",
+  "_where": "/Users/kenny.arehart/Documents/wedding/kla/node_modules/@ff0000-ad-tech/ad-dates",
+  "author": {
+    "name": "RED Interactive Agency"
+  },
+  "bugs": {
+    "url": "https://github.com/ff0000-ad-tech/ad-events/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@ff0000-ad-tech/ad-external": "^3.0.1",
+    "@ff0000-ad-tech/ad-polyfills": "^1.0.3",
+    "@ff0000-ad-tech/ad-view": "^1.1.1"
+  },
+  "deprecated": false,
+  "description": "[![npm (tag)](https://img.shields.io/npm/v/@ff0000-ad-tech%2Fad-events.svg?style=flat-square)](https://www.npmjs.com/package/@ff0000-ad-tech%2Fad-events) [![GitHub issues](https://img.shields.io/github/issues/ff0000-ad-tech/ad-events.svg?style=flat-square)](https://github.com/ff0000-ad-tech/ad-events) [![npm downloads](https://img.shields.io/npm/dm/@ff0000-ad-tech%2Fad-events.svg?style=flat-square)](https://www.npmjs.com/package/@ff0000-ad-tech%2Fad-events)",
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.16.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.5.0",
+    "np": "^2.19.0",
+    "prettier": "^1.10.2"
+  },
+  "homepage": "https://github.com/ff0000-ad-tech/ad-events#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@ff0000-ad-tech/ad-events",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ff0000-ad-tech/ad-events.git"
+  },
+  "scripts": {
+    "pub": "np"
+  },
+  "version": "1.2.0"
+}

@@ -23,12 +23,26 @@ class App extends Component {
 
 		this.state = {
 			hasMoreItems: true,
-			count: 0
+			count: 0,
+			initialCount: 2
 		}
 	}
 
+	// componentDidMount() {
+	// 	console.warn('App Did Mount')
+	// 	const script = document.createElement('script')
+	// 	script.src = 'https://s0.2mdn.net/ads/studio/cached_libs/draggable_2.0.1_min.js'
+	// 	document.body.appendChild(script)
+	// }
+
 	loadItems(page) {
 		var T = this
+		console.log('loadItems()', page)
+		// if (page == this.state.initialCount) {
+		// 	T.setState({
+		// 		hasMoreItems: false
+		// 	})
+		// }
 
 		if (T.state.count < siteData.sections.active.length) {
 			T.setState({
@@ -68,7 +82,9 @@ class App extends Component {
 					<div className="content-container">
 						{isMobile ? (
 							<InfiniteScroll
+								id="scroll-container"
 								pageStart={0}
+								// initialLoad={false}
 								loadMore={this.loadItems.bind(this)}
 								hasMore={this.state.hasMoreItems}
 								loader={loader}
