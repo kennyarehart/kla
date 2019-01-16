@@ -9,7 +9,7 @@ import InTown from './components/pages/in-town'
 import Gallery from './components/pages/gallery'
 
 import InfiniteScroll from 'react-infinite-scroller'
-import Device from './components/device'
+import Device from './components/fat/lib/Device'
 import siteData from './data/siteData.json'
 
 const classes = { Homepage, WhenWhere, Accomodation, Registry, InTown, Gallery }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import engagement from '../../images/engagement.jpg'
+// import engagement from '../../images/engagement.jpg'
 import Story from '../story'
 
 class Homepage extends Component {

@@ -4,14 +4,14 @@ import siteData from '../data/siteData.json'
 
 import ProgressiveImage from 'react-progressive-image'
 import { TweenLite } from 'gsap'
-
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-import { FrameRate } from './ad-events'
+import { FrameRate } from './fat'
 import { Sine } from 'gsap'
 
 const path = './images/story/'
 
-// console.log(ScrollToPlugin.version)
+// add to not get babeled
+ScrollToPlugin
 
 class Story extends Component {
 	constructor(props) {
@@ -63,13 +63,13 @@ class Story extends Component {
 	}
 
 	handleTouchStart(event) {
-		console.log('START')
+		// console.log('START')
 		const T = this
 		T.postScrollTick = T.frTick = 0
 		T.hasTouchEnded = false
 	}
 	handleTouchEnd(event) {
-		console.log('\t END')
+		// console.log('\t END')
 		const T = this
 		FrameRate.register(this, this.handleTick, 30)
 		T.hasTouchEnded = true
@@ -86,7 +86,7 @@ class Story extends Component {
 
 	handleTick() {
 		const T = this
-		console.log('TICK', T.postScrollTick, T.frTick)
+		// console.log('TICK', T.postScrollTick, T.frTick)
 
 		if (T.postScrollTick == T.frTick) {
 			FrameRate.unregister(this, this.handleTick, 30)
@@ -101,7 +101,7 @@ class Story extends Component {
 	// }
 
 	handleSnap() {
-		console.log('handleSnap()')
+		// console.log('handleSnap()')
 		const T = this
 		const location = Math.round(T.galleryRef.scrollLeft / window.innerWidth) * window.innerWidth
 		const distance = Math.abs(location - T.galleryRef.scrollLeft)
