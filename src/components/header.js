@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Device from './device'
+import Device from './fat/lib/Device'
 import siteData from '../data/siteData.json'
 
 class Header extends Component {
