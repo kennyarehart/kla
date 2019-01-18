@@ -1,17 +1,11 @@
 import React, { Component } from 'react'
 import siteData from '../data/siteData.json'
 // import Device from './device'
-
 import ProgressiveImage from 'react-progressive-image'
 import { TweenLite, TimelineLite } from 'gsap'
-// import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
-import { FrameRate } from './fat'
-import { Sine } from 'gsap'
+import { rel } from './fat/lib/MathUtils'
 
 const path = './images/story/'
-
-// add to not get babeled
-// ScrollToPlugin
 
 class Story extends Component {
 	constructor(props) {
@@ -25,145 +19,104 @@ class Story extends Component {
 		}
 		T.galleryRef = null
 		T.storyRef = null
-		// T.scrollTimer = null
-		// T.hasTouchEnded = false
-		// T.postScrollTick = 0
-		// T.frTick = 0
 
-		this.tl = new TimelineLite({ paused: true })
-		this.tl_images = []
-		this.tl_texts = []
-		this.tl_count = 0
-
-		this.startX = null
-		this.startT = null
+		T.tl = new TimelineLite({ paused: true })
+		T.tl_images = []
+		T.tl_texts = []
+		T.tl_count = 0
+		T.xStart = null
+		T.settle = null
 	}
 
 	componentDidMount() {
 		const T = this
-		// window.ontouchstart = T.handleTouchStart.bind(T)
-		// window.ontouchend = T.handleTouchEnd.bind(T)
+		// add listeners for touch
 		T.hitbox.ontouchstart = T.handleTouchStart.bind(T)
 		T.hitbox.ontouchend = T.handleTouchEnd.bind(T)
 		T.hitbox.ontouchmove = T.handleTouchMove.bind(T)
 
-		console.log(this.tl_images)
-		console.log(this.tl_texts)
-		this.tl_count = 0
+		console.log(T.tl_images)
+		console.log(T.tl_texts)
+		// iterate through images and texts to make a timeline
+		T.tl_count = 0
+		// TODO - make 3 = total json length
 		for (var i = 0; i < 3; i++) {
 			for (var k = 0; k < 2; k++) {
-				var label = 'step' + this.tl_count
-				var target = k === 0 ? this.tl_texts : this.tl_images
-				this.tl.add(label, this.tl_count)
-				// console.log(i, k, target[i], target[i + 1])
+				// alternate image & text layers
+				var target = k === 0 ? T.tl_texts : T.tl_images
+				// create a label
+				var label = 'step' + T.tl_count
+				T.tl.add(label, T.tl_count)
+				// add both tweens at same label to play simultaniously
 				// TODO - add delay or offset for each section
-				this.tl.to(target[i], 1, { x: '-=100%' }, label)
-				this.tl.to(target[i + 1], 1, { x: '-=100%' }, label)
-				this.tl_count++
+				T.tl.to(target[i], 1, { x: '-=100%' }, label)
+				T.tl.to(target[i + 1], 1, { x: '-=100%' }, label)
+				T.tl_count++
 			}
 		}
-		this.percentPerSlide = 1 / this.tl_count
+		// store percent (0-1) of timeline that a single slide takes
+		T.percentPerSlide = 1 / T.tl_count
 	}
-
-	// handleScroll(event) {
-	// 	console.log('SCROLL')
-	// 	const T = this
-	// 	if (T.hasTouchEnded) {
-	// 		T.postScrollTick = T.postScrollTick + 1
-	// 	}
-	// 	// check location for next load
-	// 	const mid = window.innerWidth * (T.state.current - 1) - window.innerWidth / 2
-	// 	if (T.galleryRef.scrollLeft > mid) {
-	// 		if (T.state.current < siteData.story.images.length) {
-	// 			T.setState({
-	// 				current: T.state.current + 1
-	// 			})
-	// 		}
-	// 		// console.log(T.galleryRef, T.galleryRef.scrollLeft, window.innerWidth)
-	// 	}
-
-	// 	// TODO - move this? only needed a fraction of the time
-	// 	if (T.scrollTimer !== null) {
-	// 		clearTimeout(T.scrollTimer)
-	// 	}
-	// 	T.scrollTimer = setTimeout(() => {
-	// 		console.log('timeout hit')
-	// 		T.handleSnap()
-	// 	}, 150)
-	// }
 
 	handleTouchStart(event) {
 		console.log('START', event)
 		const T = this
-		T.postScrollTick = T.frTick = 0
-		T.hasTouchEnded = false
+		// kill the settling tween
+		if (T.settle) T.settle.kill()
 
-		// T.startT = event.timeStamp
-		T.startX = event.changedTouches[0].clientX
-		T.startP = T.tl.progress()
+		// store starting x position of touch
+		T.xStart = T.xPrev = event.changedTouches[0].clientX
 	}
-	handleTouchEnd(event) {
-		console.log('\t END', event)
-		const T = this
-		// FrameRate.unregister(T, T.handleDrag, 18)
 
-		// FrameRate.register(this, this.handleTick, 30)
-		T.hasTouchEnded = true
-
-		// T.endT = event.timeStamp
-		// T.endX = event.changedTouches[0].clientX
-
-		// T.distance = T.endX - T.startX
-		// T.distancePercentPerSlide = T.distance / window.innerWidth
-		// T.distancePercentAll = T.percentPerSlide * T.distancePercentPerSlide
-
-		// T.currentProgress = this.tl.progress()
-		// this.tl.progress(-T.distancePercentAll + T.currentProgress)
-
-		// console.warn(T)
-		// TODO - tween to snap location from here
-		//		- store tween to cancel it to allow for control
-	}
 	handleTouchMove(event) {
 		// console.log('MOVE')
 		const T = this
 
+		// get timeline progress
 		T.currentProgress = this.tl.progress()
 
-		T.endX = event.changedTouches[0].clientX
-		T.distance = T.endX - T.startX
+		// current touch x
+		T.xEnd = event.changedTouches[0].clientX
+		// distance traveled since last move event
+		T.distance = T.xEnd - T.xPrev
+		// distance as a percent of the window width
 		T.distancePercentPerSlide = T.distance / window.innerWidth
+		// distance as a percent of total timeline percent
 		T.distancePercentAll = T.percentPerSlide * T.distancePercentPerSlide
-		// restrict the progress between 0 - 1
 
+		// update progress by adding to prev progress; restrict the progress between 0 - 1
 		this.tl.progress(Math.max(0, Math.min(1, -T.distancePercentAll + T.currentProgress)))
 
-		T.startX = T.endX
+		// update x for next tick
+		T.xPrev = T.xEnd
 	}
 
-	handleSnap() {
-		// console.log('handleSnap()')
+	handleTouchEnd(event) {
+		console.log('\t END', event)
 		const T = this
-		const location = Math.round(T.galleryRef.scrollLeft / window.innerWidth) * window.innerWidth
-		const distance = Math.abs(location - T.galleryRef.scrollLeft)
-		const center = window.innerWidth / 2
-		const maxTime = 1
-		const time = (distance / center) * maxTime
-		console.log('location:', location, '| distance:', distance, '| time:', time)
-		TweenLite.to(T.galleryRef, 1, {
-			scrollTo: {
-				x: location
-			},
-			ease: Sine.easeInOut
-		})
+
+		// number of frames/slides into the progress, expressed as Number with remainder of total count
+		const frameCount = T.currentProgress / T.percentPerSlide
+		// round UP that Number
+		const frameCountCeil = Math.ceil(frameCount)
+		// round DOWN that Number
+		const frameCountFloor = Math.floor(frameCount)
+		// total distance since the touch start
+		const distanceTotal = T.xEnd - T.xStart
+		// find closest percent fraction of total timeline based on:
+		// distance is : negative = move left | positive = move right
+		// multiply the rounded value by the stored percent per frame/slide
+		T.percentClosestTo = (distanceTotal < 0 ? frameCountCeil : frameCountFloor) * T.percentPerSlide
+
+		console.log(T)
+		// time range: 0.5 - 0.8; find where the full Number sits between each rounded value
+		const settleTime = rel(0.5, 0.8, frameCountCeil, frameCountFloor, frameCount)
+
+		// tween it, but store tween to kill if needed
+		T.settle = TweenLite.to(T.tl, settleTime, { progress: T.percentClosestTo })
 	}
 
 	render() {
-		// this.tl
-		// 	.kill()
-		// 	.clear()
-		// 	.pause(0)
-
 		const images = []
 		for (let i = 0; i < this.state.current; i++) {
 			const val = siteData.story.images[i]
@@ -197,11 +150,7 @@ class Story extends Component {
 		console.log('.....', text)
 
 		return (
-			<div
-				className="story"
-				ref={div => (this.storyRef = div)}
-				// onScroll={this.handleScroll.bind(this)}
-			>
+			<div className="story" ref={div => (this.storyRef = div)}>
 				<div className="gallery" ref={div => (this.galleryRef = div)}>
 					{images}
 				</div>
