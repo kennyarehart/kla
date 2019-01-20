@@ -35,32 +35,58 @@
 			}
 		]
 	},
-	"story": {
-		"images": [
-			{
+	"story": [
+		{
+			"image": {
 				"mobile": "standing_open.jpg",
 				"thumb": "standing_open__thumb.jpg"
 			},
-			{
+			"text": [
+				{ "text": "Ashley LOVES Kenny", "align": "center", "style": "top:14vh;" },
+				{ "text": "It all started", "align": "left", "style": "bottom:26vh" },
+				{ "text": "with a fire...", "align": "right", "style": "bottom:20vh" }
+			]
+		},
+		{
+			"text": [
+				{
+					"text": "literally! We met at a bonfire years ago.",
+					"align": "right",
+					"style": "top:8vh; right: 0;"
+				}
+			]
+		},
+		{
+			"image": {
 				"mobile": "standing_embraced.jpg",
 				"thumb": "standing_embraced__thumb.jpg"
-			},
-			{
+			}
+		},
+		{
+			"image": {
 				"mobile": "sit_ukulele.jpg",
 				"thumb": "sit_ukulele__thumb.jpg"
 			},
-			{
+			"text": [
+				{
+					"text": "Here is more text.",
+					"align": "center",
+					"style": "top: 4vh;"
+				},
+				{
+					"text": "This is gonna be extra long to see what a paragraph of words looks like",
+					"align": "center",
+					"style": "bottom: 10vh;"
+				}
+			]
+		},
+		{
+			"image": {
 				"mobile": "hop_on_back.jpg",
 				"thumb": "hop_on_back__thumb.jpg"
 			}
-		],
-		"text": [
-			[{ "text": "First top line", "x": 0, "y": 0 }, { "text": "First bottom line", "x": 0, "y": 0 }],
-			[{ "text": "second line", "x": 0, "y": 0 }],
-			[{ "text": "third line", "x": 0, "y": 0 }],
-			[{ "text": "forth line", "x": 0, "y": 0 }]
-		]
-	},
+		}
+	],
 	"hotels": [
 		{
 			"name": "Comfort Inn Troutdale",
