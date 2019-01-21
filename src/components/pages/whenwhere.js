@@ -1,11 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 import bridalveil from '../../images/bridalveil.jpg'
 // import MapContainer from '../map-container'
+import Section from '../Section'
 
-class WhenWhere extends Component {
+class WhenWhere extends Section {
+	constructor(props) {
+		super(props)
+		console.log(':: WhenWhere ::', props, this)
+	}
+
 	render() {
 		return (
-			<div className="when-where-page">
+			<div className="when-where-page" ref={div => (this.scrollRef = div)}>
 				<div>
 					<div className="buffered-content">
 						<h2>WEDDING CEREMONY</h2>

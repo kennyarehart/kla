@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Section from '../Section'
 
-class Gallery extends Component {
+class Gallery extends Section {
 	render() {
 		return (
 			<div>

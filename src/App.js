@@ -12,6 +12,8 @@ import InfiniteScroll from 'react-infinite-scroller'
 import Device from './components/fat/lib/Device'
 import siteData from './data/siteData.json'
 
+import ScrollWatcher from './js/ScrollWatcher'
+
 const classes = { Homepage, WhenWhere, Accomodation, Registry, InTown, Gallery }
 function dynamicClass(name) {
 	return classes[name]
@@ -26,14 +28,20 @@ class App extends Component {
 			count: 0,
 			initialCount: 2
 		}
+		this.sections = []
 	}
 
-	// componentDidMount() {
-	// 	console.warn('App Did Mount')
-	// 	const script = document.createElement('script')
-	// 	script.src = 'https://s0.2mdn.net/ads/studio/cached_libs/draggable_2.0.1_min.js'
-	// 	document.body.appendChild(script)
-	// }
+	componentDidMount() {
+		const T = this
+		console.log('APP mounted:')
+		if (Device.type === 'mobile') {
+			window.onscroll = T.handleScroll.bind(T)
+		}
+	}
+
+	handleScroll(event) {
+		ScrollWatcher.toggle(window.pageYOffset > window.innerHeight)
+	}
 
 	loadItems(page) {
 		var T = this
@@ -65,10 +73,17 @@ class App extends Component {
 					Loading ...
 				</div>
 			)
+			this.sections = []
 			for (var i = 0; i < this.state.count; i++) {
 				var item = siteData.sections.active[i]
 				var Temp = dynamicClass(item.class)
-				selectedItems.push(<Temp key={item.label} />)
+
+				if (i == 1) {
+					selectedItems.push(<Header ref={div => (this.headerRef = div)} key="header" />)
+					selectedItems.push(<Temp key={item.label} scrollWatch ref={div => (this.postHeaderRef = div)} />)
+				} else {
+					selectedItems.push(<Temp key={item.label} />)
+				}
 			}
 		} else {
 			selectedItems = siteData.sections.active.map((item, i) => {

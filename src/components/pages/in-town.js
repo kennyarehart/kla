@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
+import Section from '../Section'
 
-class InTown extends Component {
+class InTown extends Section {
 	render() {
 		return (
 			<div>

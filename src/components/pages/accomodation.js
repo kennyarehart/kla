@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import siteData from '../../data/siteData.json'
+import Section from '../Section'
 
-class Accomodation extends Component {
+class Accomodation extends Section {
 	sortRooms(pool) {
 		var prices = []
 		var labels = []
@@ -13,7 +14,7 @@ class Accomodation extends Component {
 	}
 	render() {
 		return (
-			<div className="accomodations-page buffered-content">
+			<div className="accomodations-page buffered-content" ref={div => (this.scrollRef = div)}>
 				<h2>Accommodations</h2>
 				<p className="multi max-wide">
 					We've reserved group rates at the two below hotels. Just mention{' '}

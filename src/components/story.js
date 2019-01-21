@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import siteData from '../data/siteData.json'
 // import Device from './device'
 import ProgressiveImage from 'react-progressive-image'
-import { TweenLite, TimelineLite } from 'gsap'
+import { TweenLite, TimelineMax } from 'gsap'
 import { rel } from './fat/lib/MathUtils'
 import ReactHtmlParser from 'react-html-parser'
 
@@ -14,8 +14,8 @@ class Story extends Component {
 		const T = this
 		T.state = {
 			image: props.placeholder,
-			loading: true,
-			srcSetData: { srcSet: '', sizes: '' },
+			// loading: true,
+			// srcSetData: { srcSet: '', sizes: '' },
 			current: 1
 		}
 		T.galleryRef = null
@@ -23,7 +23,7 @@ class Story extends Component {
 		T.btnNextRef = null
 		T.btnPrevRef = null
 
-		T.tl = new TimelineLite({ paused: true })
+		T.tl = new TimelineMax({ paused: true })
 		T.tl_images = []
 		T.tl_texts = []
 		T.xStart = null
@@ -44,16 +44,11 @@ class Story extends Component {
 			text: 0,
 			image: 0
 		}
-		let singles = 0
-		let duos = 0
 		for (var i = 0; i < json.length; i++) {
 			// create a label
-			var label = 'step' + i
+			var label = 'frame' + i
 			T.tl.add(label, i)
 
-			Object.keys(json[i]).length == 1 ? singles++ : duos++
-
-			// console.log('ADD LABEL:', label, jsonAt)
 			for (var k = 0; k < 2; k++) {
 				var type = k === 0 ? 'text' : 'image'
 				// alternate image & text layers
@@ -70,29 +65,43 @@ class Story extends Component {
 			}
 		}
 
-		function addTween(isSecond) {
+		function addTween() {
 			T.tl.to(target[indexes[type]], 1, { x: '-=100%' }, label)
 		}
 
 		// store percent (0-1) of timeline that a single slide takes
-		// slides of just text or image + slide with both - 1 because last slide doesn't move past bounds
-		T.percentPerSlide = 1 / (singles + duos - 1)
-		console.log('percentPerSlide:', T.percentPerSlide, singles, duos)
+		T.percentPerSlide = 1 / (json.length - 1)
+		// console.log('percentPerSlide:', T.percentPerSlide, singles, duos)
 	}
 
 	handleTouchStart(event) {
 		// console.log('START', event)
 		const T = this
 		// kill the settling tween
-		if (T.settleTween) T.settleTween.kill()
+		let wasKilled = false
+		if (T.settleTween) {
+			wasKilled = true
+			T.settleTween.kill()
+		}
 
 		// store starting x position of touch
 		T.xStart = T.xPrev = event.changedTouches[0].clientX
 
 		// load next?
-		// this.setState({
-		// 	current: this.state.current + 1
-		// })
+		// check current location to determine if next load should happen
+		let currentTime = T.tl.time()
+		// if the settle tween was stopped, need to add 1 to assume the next label
+		// is not right next to the touch
+		if (wasKilled) currentTime++
+		const nextLabel = T.tl.getLabelAfter(currentTime)
+		if (nextLabel) {
+			const stripped = +nextLabel.replace('frame', '')
+			if (stripped + 1 > this.state.current) {
+				this.setState({
+					current: stripped + 1
+				})
+			}
+		}
 	}
 
 	handleTouchMove(event) {
@@ -135,7 +144,6 @@ class Story extends Component {
 		// multiply the rounded value by the stored percent per frame/slide
 		T.percentClosestTo = (distanceTotal < 0 ? frameCountCeil : frameCountFloor) * T.percentPerSlide
 
-		console.log(T)
 		// time range: 0.5 - 0.8; find where the full Number sits between each rounded value
 		const settleTweenTime = rel(0.5, 0.8, frameCountCeil, frameCountFloor, frameCount)
 
@@ -145,11 +153,12 @@ class Story extends Component {
 	settle(time, percent) {
 		const T = this
 		// tween it, but store tween to kill if needed
-		T.settleTween = TweenLite.to(T.tl, time, { progress: percent })
+		T.settleTween = TweenLite.to(T.tl, time, { progress: percent, onComplete: () => (T.settleTween = null) })
 	}
 
 	render() {
-		console.log('render')
+		// console.log(`${Array(25).join('-')} RENDER ${Array(25).join('-')}`)
+		// console.log(this.state)
 		const images = []
 		const texts = []
 		// console.warn(this.state.current, siteData.story.length)
@@ -159,15 +168,15 @@ class Story extends Component {
 				const img = jsonAt.image
 				let child = null
 				// this will add the progressive image, perhaps mod to pass in a "load" param so the thumb is there for sure?
-				// if (i < this.state.current) {
-				child = (
-					<ProgressiveImage src={path + img.mobile} placeholder={path + img.thumb}>
-						{(src, loading) => {
-							return <img style={{ opacity: loading ? 0.4 : 1 }} src={src} alt={img.mobile} />
-						}}
-					</ProgressiveImage>
-				)
-				// }
+				if (i < this.state.current) {
+					child = (
+						<ProgressiveImage src={path + img.mobile} placeholder={path + img.thumb}>
+							{(src, loading) => {
+								return <img style={{ opacity: loading ? 0.4 : 1 }} src={src} alt={img.mobile} />
+							}}
+						</ProgressiveImage>
+					)
+				}
 				images.push(
 					<div className="img-item" key={i} ref={div => this.tl_images.push(div)}>
 						{child}
