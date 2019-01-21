@@ -38,18 +38,20 @@ class Story extends Component {
 		T.hitbox.ontouchmove = T.handleTouchMove.bind(T)
 
 		// iterate through images and texts to make a timeline
-		let tl_count = 0
 		const json = siteData.story
 
 		let indexes = {
 			text: 0,
 			image: 0
 		}
-		//TODO - when text count & image count do not matchm things get off
+		let singles = 0
+		let duos = 0
 		for (var i = 0; i < json.length; i++) {
 			// create a label
-			var label = 'step' + tl_count
-			T.tl.add(label, tl_count)
+			var label = 'step' + i
+			T.tl.add(label, i)
+
+			Object.keys(json[i]).length == 1 ? singles++ : duos++
 
 			// console.log('ADD LABEL:', label, jsonAt)
 			for (var k = 0; k < 2; k++) {
@@ -66,16 +68,16 @@ class Story extends Component {
 					}
 				}
 			}
-			tl_count++
 		}
 
-		function addTween() {
+		function addTween(isSecond) {
 			T.tl.to(target[indexes[type]], 1, { x: '-=100%' }, label)
 		}
 
 		// store percent (0-1) of timeline that a single slide takes
-		T.percentPerSlide = 1 / Math.max(T.tl_images.length, T.tl_texts.length)
-		console.log('percentPerSlide:', T.percentPerSlide)
+		// slides of just text or image + slide with both - 1 because last slide doesn't move past bounds
+		T.percentPerSlide = 1 / (singles + duos - 1)
+		console.log('percentPerSlide:', T.percentPerSlide, singles, duos)
 	}
 
 	handleTouchStart(event) {
@@ -147,6 +149,7 @@ class Story extends Component {
 	}
 
 	render() {
+		console.log('render')
 		const images = []
 		const texts = []
 		// console.warn(this.state.current, siteData.story.length)
@@ -200,8 +203,6 @@ class Story extends Component {
 				)
 			}
 		}
-
-		console.log('.....', images, texts)
 
 		return (
 			<div className="story" ref={div => (this.storyRef = div)}>

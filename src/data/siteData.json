@@ -60,7 +60,8 @@
 			"image": {
 				"mobile": "standing_embraced.jpg",
 				"thumb": "standing_embraced__thumb.jpg"
-			}
+			},
+			"text": null
 		},
 		{
 			"image": {
