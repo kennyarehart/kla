@@ -38,6 +38,9 @@ class Story extends Component {
 		T.hitbox.ontouchend = T.handleTouchEnd.bind(T)
 		T.hitbox.ontouchmove = T.handleTouchMove.bind(T)
 
+		T.btnPrevRef.onclick = T.handleManualPrev.bind(T)
+		T.btnNextRef.onclick = T.handleManualNext.bind(T)
+
 		// iterate through images and texts to make a timeline
 		const json = siteData.story[jsonImageNode]
 
@@ -72,7 +75,7 @@ class Story extends Component {
 
 		// store percent (0-1) of timeline that a single slide takes
 		T.percentPerSlide = 1 / (json.length - 1)
-		// console.log('percentPerSlide:', T.percentPerSlide, singles, duos)
+		console.log('percentPerSlide:', T.percentPerSlide)
 	}
 
 	handleTouchStart(event) {
@@ -88,6 +91,11 @@ class Story extends Component {
 		// store starting x position of touch
 		T.xStart = T.xPrev = event.changedTouches[0].clientX
 
+		T.checkImageLoad(wasKilled)
+	}
+
+	checkImageLoad(wasKilled) {
+		const T = this
 		// load next?
 		// check current location to determine if next load should happen
 		let currentTime = T.tl.time()
@@ -153,8 +161,51 @@ class Story extends Component {
 
 	settle(time, percent) {
 		const T = this
+		console.log('settle() to percent:', percent)
 		// tween it, but store tween to kill if needed
-		T.settleTween = TweenLite.to(T.tl, time, { progress: percent, onComplete: () => (T.settleTween = null) })
+		T.settleTween = TweenLite.to(T.tl, time, {
+			progress: percent,
+			onComplete: () => (T.settleTween = null)
+		})
+	}
+
+	handleManualNext() {
+		this.handleManual(false)
+	}
+
+	handleManualPrev() {
+		this.handleManual(true)
+	}
+
+	handleManual(isPrev) {
+		const T = this
+		T.checkImageLoad()
+		T.currentProgress = T.tl.progress()
+		let perSlide = T.percentPerSlide
+		if (isPrev) {
+			perSlide *= -1
+			if (T.currentProgress <= 0) return
+		} else {
+			if (T.currentProgress >= 1) return
+		}
+		let percent = T.currentProgress + perSlide
+
+		// make sure there are no fractional rounding errors
+		if (percent < 0) percent = 0
+		else if (percent > 1) percent = 1
+
+		if (percent === 0) {
+			T.btnPrevRef.classList.add('story-btn-disable')
+		} else if (percent === 1) {
+			T.btnNextRef.classList.add('story-btn-disable')
+		} else {
+			T.btnPrevRef.classList.remove('story-btn-disable')
+			T.btnNextRef.classList.remove('story-btn-disable')
+		}
+
+		if (!T.settleTween) {
+			T.settle(0.8, percent)
+		}
 	}
 
 	render() {
@@ -213,6 +264,8 @@ class Story extends Component {
 				)
 			}
 		}
+		const prevTxt = '<<'
+		const nextTxt = '>>'
 
 		return (
 			<div className="story" ref={div => (this.storyRef = div)}>
@@ -228,11 +281,11 @@ class Story extends Component {
 					{texts}
 				</div>
 				<div className="hitbox" ref={div => (this.hitbox = div)} />
-				<button className="prev" ref={div => (this.btnNextRef = div)}>
-					NEXT
+				<button className="prev story-btn-disable" ref={div => (this.btnPrevRef = div)}>
+					{prevTxt}
 				</button>
-				<button className="next" ref={div => (this.btnPrevRef = div)}>
-					PREV
+				<button className="next" ref={div => (this.btnNextRef = div)}>
+					{nextTxt}
 				</button>
 			</div>
 		)

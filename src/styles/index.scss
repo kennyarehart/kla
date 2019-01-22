@@ -177,15 +177,23 @@ ul {
 	}
 
 	// ::::: _accomodations :::::
-	#hotels-holder {
+	.hotels-holder {
 		display: block;
 		max-width: 100%;
+		img {
+			margin: 0;
+		}
 	}
 
 	// :::::: _story ::::::
 	.story {
 		button {
 			display: none;
+		}
+		.hitbox {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
 		}
 	}
 }

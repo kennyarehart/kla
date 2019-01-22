@@ -1,4 +1,4 @@
-#hotels-holder {
+.hotels-holder {
 	display: flex;
 	align-content: center;
 	align-items: flex-start;
@@ -9,10 +9,23 @@
 
 	.hotel-single {
 		margin-bottom: 2em;
+		flex-grow: 1;
+		flex-basis: 0;
+		h3 {
+			margin-left: 0.5em;
+			margin-right: 0.5em;
+		}
 	}
 	.hotel-chunk {
 		margin-bottom: 0.6em;
 	}
+	img {
+		margin: 0 1em;
+	}
+}
+
+.non-reserved {
+	max-width: 1000px;
 }
 
 .wedding-name {

@@ -6,10 +6,6 @@ import ScrollWatcher from '../js/ScrollWatcher'
 import GlobalManager from '../js/GlobalManager'
 
 class Header extends Component {
-	// getSnapshotBeforeUpdate(prevProps, prevState) {
-	// 	console.log('BRO')
-	// }
-
 	// deprecated. Find alt solution later
 	componentWillMount() {
 		GlobalManager.registerHeader(this, this.updateMe)

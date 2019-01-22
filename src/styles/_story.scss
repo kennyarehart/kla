@@ -47,10 +47,42 @@
 			margin-left: 0;
 		}
 	}
-	.hitbox {
+	// .hitbox {
+	// 	position: absolute;
+	// 	width: 100vw;
+	// 	height: 100vh;
+	// }
+	button {
 		position: absolute;
-		width: 100vw;
+		width: 20vw;
 		height: 100vh;
-		// background-color: rgba(255, 255, 0, 0.1);
+		// background: rgba(0, 255, 0, 0.5);
+		cursor: pointer;
+		color: $colorLight;
+		font-family: 'Cabin Sketch', Arial;
+		font-size: 10em;
+		text-shadow: $textShadow;
+		//// RESET ////
+		background: none;
+		border: 0;
+		padding: 0;
+		line-height: normal;
+		overflow: visible;
+		-webkit-appearance: button; /* for input */
+		-webkit-user-select: none; /* for button */
+		-moz-user-select: none;
+		-ms-user-select: none;
+	}
+	button:hover {
+		color: $colorComp;
+	}
+	button:focus {
+		outline: 0;
+	}
+	button.next {
+		right: 0;
+	}
+	.story-btn-disable {
+		display: none;
 	}
 }

@@ -35,118 +35,239 @@
 			}
 		]
 	},
-	"story": [
-		{
-			"image": {
-				"desktop": {
-					"full": "d_standing_open.jpg",
-					"thumb": "d_standing_open__thumb.jpg"
-				},
-				"mobile": {
-					"full": "m_standing_open.jpg",
+	"story": {
+		"mobile": [
+			{
+				"image": {
+					"large": "m_standing_open.jpg",
 					"thumb": "m_standing_open__thumb.jpg"
-				}
-			},
-			"text": [
-				{ "text": "Ashley LOVES Kenny", "align": "center", "style": "top:14vh;" },
-				{ "text": "It all started", "align": "left", "style": "bottom:26vh" },
-				{ "text": "with a fire...", "align": "right", "style": "bottom:20vh" }
-			]
-		},
-		{
-			"text": [
-				{
-					"text": "literally! We met at a bonfire years ago.",
-					"align": "right",
-					"style": "top:8vh; right: 0;"
-				}
-			]
-		},
-		{
-			"image": {
-				"desktop": {
-					"full": "d_standing_embraced.jpg",
-					"thumb": "d_standing_embraced__thumb.jpg"
 				},
-				"mobile": {
-					"full": "m_standing_embraced.jpg",
+				"text": [
+					{ "text": "Ashley LOVES Kenny", "align": "center", "style": "top:14vh;" },
+					{ "text": "It all started", "align": "left", "style": "bottom:26vh" },
+					{ "text": "with a fire...", "align": "right", "style": "bottom:20vh" }
+				]
+			},
+			{
+				"text": [
+					{
+						"text": "literally! We met at a bonfire years ago.",
+						"align": "right",
+						"style": "top:8vh; right: 0;"
+					}
+				]
+			},
+			{
+				"image": {
+					"large": "m_standing_embraced.jpg",
 					"thumb": "m_standing_embraced__thumb.jpg"
 				}
-			}
-		},
-		{
-			"image": {
-				"desktop": {
-					"full": "d_sit_ukulele.jpg",
-					"thumb": "d_sit_ukulele__thumb.jpg"
-				},
-				"mobile": {
-					"full": "m_sit_ukulele.jpg",
-					"thumb": "m_sit_ukulele__thumb.jpg"
-				}
 			},
-			"text": [
-				{
-					"text": "Here is more text.",
-					"align": "center",
-					"style": "top: 4vh;"
+			{
+				"image": {
+					"large": "m_sit_ukulele.jpg",
+					"thumb": "m_sit_ukulele__thumb.jpg"
 				},
-				{
-					"text": "This is gonna be extra long to see what a paragraph of words looks like",
-					"align": "center",
-					"style": "bottom: 10vh;"
-				}
-			]
-		},
-		{
-			"image": {
-				"desktop": {
-					"full": "d_hop_on_back.jpg",
-					"thumb": "d_hop_on_back__thumb.jpg"
-				},
-				"mobile": {
-					"full": "m_hop_on_back.jpg",
+				"text": [
+					{
+						"text": "Here is more text.",
+						"align": "center",
+						"style": "top: 4vh;"
+					},
+					{
+						"text": "This is gonna be extra long to see what a paragraph of words looks like",
+						"align": "center",
+						"style": "bottom: 10vh;"
+					}
+				]
+			},
+			{
+				"image": {
+					"large": "m_hop_on_back.jpg",
 					"thumb": "m_hop_on_back__thumb.jpg"
 				}
 			}
-		}
-	],
-	"hotels": [
-		{
-			"name": "Comfort Inn Troutdale",
-			"address": ["1000 Northwest Graham Road", "Troutdale, OR 97060"],
-			"contact": {
-				"name": "Stephanie Madrigal",
-				"email": "gm@citroutdale.com",
-				"phone": "(503) 492-2900",
-				"url:": "https://www.comfortinntroutdale.com/"
-			},
-			"rooms": [
-				{
-					"price": "$166",
-					"label": "Classic King"
+		],
+		"desktop": [
+			{
+				"image": {
+					"large": "d_standing_open.jpg",
+					"thumb": "d_standing_open__thumb.jpg"
 				},
-				{
-					"price": "$175",
-					"label": "Double Queen"
-				}
-			]
-		},
-		{
-			"name": "Holiday Inn Express Troutdale",
-			"address": ["477NW Phoenix Dr", "Troutdale, OR 97060"],
-			"contact": {
-				"name": "Art Trafton",
-				"email": "atrafton@gorgehotels.com",
-				"phone": "(503) 669-6500",
-				"url:": "https://www.ihg.com/holidayinnexpress/hotels/us/en/troutdale/ttdtd/hoteldetail"
+				"text": [
+					{ "text": "Ashley LOVES Kenny", "align": "center", "style": "top:14vh;" },
+					{ "text": "It all started<br>with a fire...", "align": "right", "style": "bottom:20vh" }
+				]
 			},
-			"rooms": [
-				{
-					"price": "$189",
-					"label": "Classic King"
+
+			{
+				"text": [
+					{
+						"text": "We reconnected about 5 years later when Ashley asked a question, 'Hey, we should get drinks sometime.'",
+						"align": "center",
+						"style": "top: 40vh;"
+					}
+				]
+			},
+			{
+				"image": {
+					"large": "d_standing_embraced.jpg",
+					"thumb": "d_standing_embraced__thumb.jpg"
 				}
-			]
-		}
-	]
+			},
+
+			{
+				"text": [
+					{
+						"text": "We really hit it off and were on the same page in life, however Kenny was getting ready to move to Portland, OR. ",
+						"align": "center",
+						"style": "top: 40vh;"
+					}
+				]
+			},
+			{
+				"text": [
+					{
+						"text": "We did long distance for 4 months and saw each other every month. While exchanging Christmas gifts, this time Kenny had a question, 'Will you move to Portland with me?'",
+						"align": "center",
+						"style": "top: 40vh;"
+					}
+				]
+			},
+			{
+				"image": {
+					"large": "d_sit_ukulele.jpg",
+					"thumb": "d_sit_ukulele__thumb.jpg"
+				}
+			},
+			{
+				"text": [
+					{
+						"text": "Ashley said yes! We had a fantastic road trip moving Ashley up to Portland.",
+						"align": "center",
+						"style": "top: 40vh;"
+					}
+				]
+			},
+			{
+				"text": [
+					{
+						"text": "After a year in our adorable apartment, we bought a house! Project after project we began turning our house into a home.",
+						"align": "center",
+						"style": "top: 40vh;"
+					}
+				]
+			},
+
+			{
+				"image": {
+					"large": "d_hop_on_back.jpg",
+					"thumb": "d_hop_on_back__thumb.jpg"
+				}
+			},
+			{
+				"text": [
+					{
+						"text": "After traveling all over the US, we decided it was time for a month off of life! SE Asia was the destination!",
+						"align": "center",
+						"style": "top: 40vh;"
+					}
+				]
+			},
+			{
+				"text": [
+					{
+						"text": "While hiking in Ubud, Bali, Kenny (with the help of his ukulele) asked the biggest question yet, '“'Will you marry me?'",
+						"align": "center",
+						"style": "top: 40vh;"
+					}
+				]
+			},
+			{
+				"text": [{ "text": "Ashley, of course, said yes!!", "align": "center", "style": "top: 40vh;" }]
+			}
+		]
+	},
+	"hotels": {
+		"reserved": [
+			{
+				"name": "Comfort Inn Troutdale",
+				"image": {
+					"large": "hotel_comfortinn.jpg",
+					"thumb": "hotel_comfortinn__thumb.jpg"
+				},
+				"address": ["1000 Northwest Graham Road", "Troutdale, OR 97060"],
+				"contact": {
+					"name": "Stephanie Madrigal",
+					"email": "gm@citroutdale.com",
+					"phone": "(503) 492-2900",
+					"url:": "https://www.comfortinntroutdale.com/"
+				},
+				"rooms": [
+					{
+						"price": "$166",
+						"label": "Classic King"
+					},
+					{
+						"price": "$175",
+						"label": "Double Queen"
+					}
+				]
+			},
+			{
+				"name": "Holiday Inn Express Troutdale",
+				"image": {
+					"large": "hotel_holidayinn.jpg",
+					"thumb": "hotel_holidayinn__thumb.jpg"
+				},
+				"address": ["477NW Phoenix Dr", "Troutdale, OR 97060"],
+				"contact": {
+					"name": "Art Trafton",
+					"email": "atrafton@gorgehotels.com",
+					"phone": "(503) 669-6500",
+					"url:": "https://www.ihg.com/holidayinnexpress/hotels/us/en/troutdale/ttdtd/hoteldetail"
+				},
+				"rooms": [
+					{
+						"price": "$189",
+						"label": "Classic King"
+					}
+				]
+			}
+		],
+		"other": [
+			{
+				"name": "Best Western Plus Cascade Inn & Suites",
+				"address": ["23525 NE Halsey St", "Troutdale, OR 97060"],
+				"contact": {
+					"phone": "(503) 491-9700",
+					"url:": "https://www.bestwestern.com/en_US/book/hotels-in-troutdale/best-western-plus-cascade-inn-suites/propertyCode.38140.html"
+				}
+			},
+			{
+				"name": "Travelodge by Wyndham Gresham",
+				"address": ["23705 NE Sandy Blvd", "Troutdale, OR 97060"],
+				"contact": {
+					"phone": "(503) 666-6623",
+					"url:": "https://www.wyndhamhotels.com/travelodge/troutdale-oregon/travelodge-east-portland-gresham/overview"
+				}
+			},
+			{
+				"name": "Motel 6 Troutdale",
+				"address": ["1610 NW Frontage Rd", "Troutdale, OR 97060"],
+				"contact": {
+					"phone": "(503) 665-2254",
+					"url:": "https://www.motel6.com/en/motels.or.troutdale.407.html"
+				}
+			},
+			{
+				"name": "McMenamins Edgefield",
+				"address": ["2126 SW Halsey St", "Troutdale, OR 97060"],
+				"contact": {
+					"phone": "(503) 669-8610",
+					"url:": "https://reserve.mcmenamins.com/mcmenamins/"
+				}
+			}
+		]
+	}
 }

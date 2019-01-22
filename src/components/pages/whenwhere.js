@@ -57,10 +57,23 @@ class WhenWhere extends Section {
 							</div>
 						</div>
 						<br />
-						<p className="end-capped">
+						<p>
 							The Ceremony will be outdoors on grass with the Reception to follow with seating & dance
 							floor in open air tents.
 						</p>
+						<br />
+						<div className="end-capped">
+							<h3>Transportation</h3>
+							<p>
+								Shuttles will be available to and from the hotels we have rooms blocked out. A timeline
+								of the day will be available soon.
+								<br />
+								If you wish to drive, Bridal Veil has ample parking. However the road up to the venue is
+								dirt and has several twists.
+								<br />
+								There is handicap accessible drop off points directly at the venue.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
