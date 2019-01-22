@@ -39,7 +39,7 @@ class Story extends Component {
 		T.hitbox.ontouchmove = T.handleTouchMove.bind(T)
 
 		// iterate through images and texts to make a timeline
-		const json = siteData.story
+		const json = siteData.story[jsonImageNode]
 
 		let indexes = {
 			text: 0,
@@ -163,18 +163,15 @@ class Story extends Component {
 		const images = []
 		const texts = []
 		// console.warn(this.state.current, siteData.story.length)
-		for (let i = 0; i < siteData.story.length; i++) {
-			const jsonAt = siteData.story[i]
+		for (let i = 0; i < siteData.story[jsonImageNode].length; i++) {
+			const jsonAt = siteData.story[jsonImageNode][i]
 			if (jsonAt.image) {
 				const img = jsonAt.image
 				let child = null
 				// this will add the progressive image, perhaps mod to pass in a "load" param so the thumb is there for sure?
 				if (i < this.state.current) {
 					child = (
-						<ProgressiveImage
-							src={path + img[jsonImageNode].full}
-							placeholder={path + img[jsonImageNode].thumb}
-						>
+						<ProgressiveImage src={path + img.large} placeholder={path + img.thumb}>
 							{(src, loading) => {
 								return <img style={{ opacity: loading ? 0.4 : 1 }} src={src} alt={img.mobile} />
 							}}
@@ -231,8 +228,12 @@ class Story extends Component {
 					{texts}
 				</div>
 				<div className="hitbox" ref={div => (this.hitbox = div)} />
-				<button ref={div => (this.btnNextRef = div)}>NEXT</button>
-				<button ref={div => (this.btnPrevRef = div)}>PREV</button>
+				<button className="prev" ref={div => (this.btnNextRef = div)}>
+					NEXT
+				</button>
+				<button className="next" ref={div => (this.btnPrevRef = div)}>
+					PREV
+				</button>
 			</div>
 		)
 	}
