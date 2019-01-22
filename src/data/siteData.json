@@ -38,8 +38,14 @@
 	"story": [
 		{
 			"image": {
-				"mobile": "standing_open.jpg",
-				"thumb": "standing_open__thumb.jpg"
+				"desktop": {
+					"full": "d_standing_open.jpg",
+					"thumb": "d_standing_open__thumb.jpg"
+				},
+				"mobile": {
+					"full": "m_standing_open.jpg",
+					"thumb": "m_standing_open__thumb.jpg"
+				}
 			},
 			"text": [
 				{ "text": "Ashley LOVES Kenny", "align": "center", "style": "top:14vh;" },
@@ -58,14 +64,26 @@
 		},
 		{
 			"image": {
-				"mobile": "standing_embraced.jpg",
-				"thumb": "standing_embraced__thumb.jpg"
+				"desktop": {
+					"full": "d_standing_embraced.jpg",
+					"thumb": "d_standing_embraced__thumb.jpg"
+				},
+				"mobile": {
+					"full": "m_standing_embraced.jpg",
+					"thumb": "m_standing_embraced__thumb.jpg"
+				}
 			}
 		},
 		{
 			"image": {
-				"mobile": "sit_ukulele.jpg",
-				"thumb": "sit_ukulele__thumb.jpg"
+				"desktop": {
+					"full": "d_sit_ukulele.jpg",
+					"thumb": "d_sit_ukulele__thumb.jpg"
+				},
+				"mobile": {
+					"full": "m_sit_ukulele.jpg",
+					"thumb": "m_sit_ukulele__thumb.jpg"
+				}
 			},
 			"text": [
 				{
@@ -82,8 +100,14 @@
 		},
 		{
 			"image": {
-				"mobile": "hop_on_back.jpg",
-				"thumb": "hop_on_back__thumb.jpg"
+				"desktop": {
+					"full": "d_hop_on_back.jpg",
+					"thumb": "d_hop_on_back__thumb.jpg"
+				},
+				"mobile": {
+					"full": "m_hop_on_back.jpg",
+					"thumb": "m_hop_on_back__thumb.jpg"
+				}
 			}
 		}
 	],

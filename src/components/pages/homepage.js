@@ -1,15 +1,11 @@
-import React, { Component } from 'react'
-// import engagement from '../../images/engagement.jpg'
+import React from 'react'
 import Story from '../story'
+import Section from '../Section'
 
-class Homepage extends Component {
+class Homepage extends Section {
 	render() {
 		return (
 			<div className="home-page">
-				{/* <h2>We're getting married!!!</h2>
-				<img src={engagement} className="large-img postcard" alt="engagement" />
-				<br /> */}
-
 				<Story />
 			</div>
 		)

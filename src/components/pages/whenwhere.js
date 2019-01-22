@@ -4,11 +4,6 @@ import bridalveil from '../../images/bridalveil.jpg'
 import Section from '../Section'
 
 class WhenWhere extends Section {
-	constructor(props) {
-		super(props)
-		console.log(':: WhenWhere ::', props, this)
-	}
-
 	render() {
 		return (
 			<div className="when-where-page" ref={div => (this.scrollRef = div)}>
@@ -27,7 +22,7 @@ class WhenWhere extends Section {
 							</span>
 						</p>
 					</div>
-					<img src={bridalveil} className="large-img postcard" alt="bridal-veil" />
+					<img src={bridalveil} className="large-img shadow" alt="bridal-veil" />
 
 					<div className="buffered-content">
 						{/* <MapContainer /> */}
@@ -40,23 +35,25 @@ class WhenWhere extends Section {
 							east wind. Spend the day in a relaxed and enchanting atmosphere.
 						</p>
 
-						<h3>DAY OF TIMELINE</h3>
-						<div className="dual-column">
-							<div>
-								<ul>
-									<li>5:00 pm</li>
-									<li>5:30 - 6:00 pm</li>
-									<li>6:00 - 7:00 pm</li>
-									<li>7:00 - 12:00 pm</li>
-								</ul>
-							</div>
-							<div>
-								<ul>
-									<li>Guests Arrive</li>
-									<li>Ceremony</li>
-									<li>Cocktail Hour & Photos</li>
-									<li>Reception, Dinner, & Dancing</li>
-								</ul>
+						<div id="timeline-day-of">
+							<h3>DAY OF TIMELINE</h3>
+							<div className="dual-column">
+								<div>
+									<ul>
+										<li>5:00 pm</li>
+										<li>5:30 - 6:00 pm</li>
+										<li>6:00 - 7:00 pm</li>
+										<li>7:00 - 12:00 pm</li>
+									</ul>
+								</div>
+								<div>
+									<ul>
+										<li>Guests Arrive</li>
+										<li>Ceremony</li>
+										<li>Cocktail Hour & Photos</li>
+										<li>Reception, Dinner, & Dancing</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 						<br />

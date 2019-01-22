@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import siteData from '../data/siteData.json'
-// import Device from './device'
+import Device from '../js/fat/lib/Device'
 import ProgressiveImage from 'react-progressive-image'
 import { TweenLite, TimelineMax } from 'gsap'
-import { rel } from './fat/lib/MathUtils'
+import { rel } from '@ff0000-ad-tech/ad-utils/lib/MathUtils'
 import ReactHtmlParser from 'react-html-parser'
 
 const path = './images/story/'
+const jsonImageNode = Device.type === 'mobile' ? 'mobile' : 'desktop'
 
 class Story extends Component {
 	constructor(props) {
@@ -170,7 +171,10 @@ class Story extends Component {
 				// this will add the progressive image, perhaps mod to pass in a "load" param so the thumb is there for sure?
 				if (i < this.state.current) {
 					child = (
-						<ProgressiveImage src={path + img.mobile} placeholder={path + img.thumb}>
+						<ProgressiveImage
+							src={path + img[jsonImageNode].full}
+							placeholder={path + img[jsonImageNode].thumb}
+						>
 							{(src, loading) => {
 								return <img style={{ opacity: loading ? 0.4 : 1 }} src={src} alt={img.mobile} />
 							}}

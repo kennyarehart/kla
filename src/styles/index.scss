@@ -1,0 +1,191 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+// @import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Lato:100,400,900');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Special+Elite|Cabin+Sketch:700');
+$colorDark: #0b2e3a;
+$colorMid: #1d657c;
+$colorLight: #0099cd;
+$colorComp: #c8a14a;
+$colorNeutral: #eee;
+$textShadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+
+@import 'header';
+@import 'whenwhere';
+@import 'story';
+@import 'accomodations';
+
+body {
+	font-family: 'Special Elite', cursive;
+	background: $colorNeutral;
+	font-size: 0.8em;
+}
+
+html,
+body,
+#root,
+.App {
+	width: 100%;
+}
+
+//-------------------------------------------------------------------------------
+.buffered-content {
+	margin-left: 5vw;
+	max-width: calc(100% - 10vw);
+}
+
+// .content-container, // <-- messes up story gallery
+.when-where-page,
+.accomodations-page {
+	text-align: center;
+}
+
+h1 {
+	color: $colorMid;
+	font-family: 'Cabin Sketch', Arial;
+}
+
+h2 {
+	font-size: 3em;
+	color: $colorMid;
+	margin: 1em;
+	font-family: 'Amatic SC', Arial;
+}
+
+h3 {
+	color: $colorComp;
+	margin: 1em;
+	font-family: 'Amatic SC', Arial;
+	font-size: 2em;
+}
+
+p {
+	line-height: 1.5em;
+	a {
+		color: $colorMid;
+		text-decoration: none;
+	}
+	a:hover {
+		color: $colorComp;
+	}
+}
+
+.end-capped {
+	padding-bottom: 2em;
+}
+
+p.multi {
+	br {
+		line-height: 3em;
+	}
+}
+
+.max-wide {
+	max-width: 900px;
+	margin: auto;
+}
+
+ul {
+	list-style-type: none;
+	line-height: 2em;
+}
+
+.dual-column {
+	display: flex;
+	justify-content: center;
+
+	> :nth-child(1) {
+		text-align: right;
+		color: $colorMid;
+	}
+
+	> :nth-child(2) {
+		margin-left: 1em;
+		text-align: left;
+		color: $colorLight;
+	}
+}
+
+.large-img {
+	max-width: 1000px;
+}
+
+.shadow {
+	box-shadow: 2px 3px 13px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 2px 3px 13px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 2px 3px 13px 1px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-br {
+	display: none;
+}
+
+//-------------------------------------------------------------------------------
+// DISABLE
+#timeline-day-of {
+	display: none;
+}
+
+//-------------------------------------------------------------------------------
+/* iPad */
+@media only screen and (min-device-width: 768px) {
+	.header {
+		h1 {
+			font-size: 4em;
+		}
+	}
+}
+
+//-------------------------------------------------------------------------------
+/* Mobile */
+@media only screen and (max-device-width: 700px) {
+	h2 {
+		font-size: 2.5em;
+	}
+	.lock {
+		position: fixed;
+		top: 0;
+	}
+	.sub-lock {
+		margin-top: 21vh;
+	}
+
+	// hack? - change this to make scroll numbers work
+	.large-img {
+		max-width: 100%;
+	}
+
+	// ::::: _header ::::::
+	.header {
+		width: 100%;
+		background: $colorNeutral;
+		margin: 0;
+		padding: 2vw 5vw 0vw 5vw;
+		height: 15vh;
+		// box-shadow: 0 4px 8px 0 $colorNeutral;
+
+		h1 {
+			font-size: 3em;
+			// margin-top: 0.6em;
+			// margin-bottom: 0.3em;
+		}
+		.mobile-br {
+			display: block;
+		}
+	}
+
+	// ::::: _accomodations :::::
+	#hotels-holder {
+		display: block;
+		max-width: 100%;
+	}
+
+	// :::::: _story ::::::
+	.story {
+		button {
+			display: none;
+		}
+	}
+}

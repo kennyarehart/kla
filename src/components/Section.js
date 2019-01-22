@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import ScrollWatcher from '../js/ScrollWatcher'
+import GlobalManager from '../js/GlobalManager'
 
 class Section extends Component {
 	constructor(props) {
@@ -8,6 +9,13 @@ class Section extends Component {
 		if (props.scrollWatch) {
 			this.scrollWatch = true
 		}
+		this.state = {}
+	}
+
+	static getDerivedStateFromProps(props, state) {
+		GlobalManager.toggleHeader(props)
+		// must return
+		return null
 	}
 
 	componentDidMount(props) {

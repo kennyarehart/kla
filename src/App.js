@@ -9,7 +9,7 @@ import InTown from './components/pages/in-town'
 import Gallery from './components/pages/gallery'
 
 import InfiniteScroll from 'react-infinite-scroller'
-import Device from './components/fat/lib/Device'
+import Device from './js/fat/lib/Device'
 import siteData from './data/siteData.json'
 
 import ScrollWatcher from './js/ScrollWatcher'
@@ -63,10 +63,22 @@ class App extends Component {
 		}
 	}
 
+	componentDidUpdate(prevProps) {
+		console.warn('componentDidUpdate()', prevProps)
+		if (this.props.location !== prevProps.location) {
+			this.onRouteChanged()
+		}
+	}
+
+	onRouteChanged() {
+		console.log('ROUTE CHANGED')
+	}
+
 	render() {
 		let loader
 		let selectedItems = []
 		const isMobile = Device.type === 'mobile'
+		let header = null
 		if (isMobile) {
 			loader = (
 				<div className="loader" key={'loader'}>
@@ -77,8 +89,7 @@ class App extends Component {
 			for (var i = 0; i < this.state.count; i++) {
 				var item = siteData.sections.active[i]
 				var Temp = dynamicClass(item.class)
-
-				if (i == 1) {
+				if (i === 1) {
 					selectedItems.push(<Header ref={div => (this.headerRef = div)} key="header" />)
 					selectedItems.push(<Temp key={item.label} scrollWatch ref={div => (this.postHeaderRef = div)} />)
 				} else {
@@ -86,6 +97,7 @@ class App extends Component {
 				}
 			}
 		} else {
+			header = <Header />
 			selectedItems = siteData.sections.active.map((item, i) => {
 				return <Route exact path={item.path} component={dynamicClass(item.class)} key={item.label} />
 			})
@@ -93,7 +105,7 @@ class App extends Component {
 		return (
 			<Router>
 				<div className="App">
-					{/* <Header /> */}
+					{header}
 					<div className="content-container">
 						{isMobile ? (
 							<InfiniteScroll

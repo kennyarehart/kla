@@ -1,0 +1,56 @@
+.story {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+
+	.gallery {
+		img,
+		.img-item,
+		.txt-item {
+			width: 100vw;
+			height: 100vh;
+		}
+		img {
+			object-fit: cover;
+		}
+
+		.img-item,
+		.txt-item {
+			text-align: unset;
+			position: absolute;
+			margin-left: 100vw;
+
+			.left,
+			.right,
+			.center {
+				width: 92vw;
+				margin-left: 4vw;
+				margin-right: 4vw;
+			}
+			.center {
+				text-align: center;
+			}
+			.right {
+				text-align: right;
+			}
+		}
+		.txt-item {
+			color: white;
+			line-height: 1.5em;
+			font-size: 2em;
+			text-shadow: $textShadow; // background-color: rgba(255, 0, 0, 0.1);
+			> div {
+				position: absolute;
+			}
+		}
+		> :nth-child(1) {
+			margin-left: 0;
+		}
+	}
+	.hitbox {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		// background-color: rgba(255, 255, 0, 0.1);
+	}
+}
