@@ -10,7 +10,7 @@ import Gallery from './components/pages/gallery'
 
 import InfiniteScroll from 'react-infinite-scroller'
 import Device from './js/fat/lib/Device'
-import siteData from './data/siteData.json'
+import sectionData from './data/sectionData.json'
 
 import ScrollWatcher from './js/ScrollWatcher'
 
@@ -40,6 +40,7 @@ class App extends Component {
 	}
 
 	handleScroll(event) {
+		// console.log('scroll', window.pageYOffset, window.innerHeight, window.visualViewport.height)
 		ScrollWatcher.toggle(window.pageYOffset > window.innerHeight)
 	}
 
@@ -52,7 +53,7 @@ class App extends Component {
 		// 	})
 		// }
 
-		if (T.state.count < siteData.sections.active.length) {
+		if (T.state.count < sectionData.active.length) {
 			T.setState({
 				count: page
 			})
@@ -61,17 +62,6 @@ class App extends Component {
 				hasMoreItems: false
 			})
 		}
-	}
-
-	componentDidUpdate(prevProps) {
-		console.warn('componentDidUpdate()', prevProps)
-		if (this.props.location !== prevProps.location) {
-			this.onRouteChanged()
-		}
-	}
-
-	onRouteChanged() {
-		console.log('ROUTE CHANGED')
 	}
 
 	render() {
@@ -87,7 +77,7 @@ class App extends Component {
 			)
 			this.sections = []
 			for (var i = 0; i < this.state.count; i++) {
-				var item = siteData.sections.active[i]
+				var item = sectionData.active[i]
 				var Temp = dynamicClass(item.class)
 				if (i === 1) {
 					selectedItems.push(<Header ref={div => (this.headerRef = div)} key="header" />)
@@ -98,7 +88,7 @@ class App extends Component {
 			}
 		} else {
 			header = <Header />
-			selectedItems = siteData.sections.active.map((item, i) => {
+			selectedItems = sectionData.active.map((item, i) => {
 				return <Route exact path={item.path} component={dynamicClass(item.class)} key={item.label} />
 			})
 		}

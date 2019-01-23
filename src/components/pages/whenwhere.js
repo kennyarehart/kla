@@ -1,5 +1,5 @@
 import React from 'react'
-import bridalveil from '../../images/bridalveil.jpg'
+// import bridalveil from '../../images/bridalveil.jpg'
 // import MapContainer from '../map-container'
 import Section from '../Section'
 
@@ -22,7 +22,7 @@ class WhenWhere extends Section {
 							</span>
 						</p>
 					</div>
-					<img src={bridalveil} className="large-img shadow" alt="bridal-veil" />
+					<img src="./images/bridalveil.jpg" className="large-img shadow" alt="bridal-veil" />
 
 					<div className="buffered-content">
 						{/* <MapContainer /> */}

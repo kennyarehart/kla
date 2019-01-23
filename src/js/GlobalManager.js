@@ -15,7 +15,7 @@ export default class GlobalManager {
 
 	static toggleHeader = props => {
 		const T = GlobalManager
-		console.log('GlobalMAnager.toggle()')
+		// console.log('GlobalManager.toggle()')
 		if (Device.type !== 'mobile') {
 			var isHome = props.location.pathname === '/'
 			if (isHome !== T._isHome) {

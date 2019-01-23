@@ -1,0 +1,82 @@
+{
+	"reserved": [
+		{
+			"name": "Comfort Inn Troutdale",
+			"image": {
+				"large": "hotel_comfortinn.jpg",
+				"thumb": "hotel_comfortinn__thumb.jpg"
+			},
+			"address": ["1000 Northwest Graham Road", "Troutdale, OR 97060"],
+			"contact": {
+				"name": "Stephanie Madrigal",
+				"email": "gm@citroutdale.com",
+				"phone": "(503) 492-2900",
+				"url": "https://www.comfortinntroutdale.com/"
+			},
+			"rooms": [
+				{
+					"price": "$166",
+					"label": "Classic King"
+				},
+				{
+					"price": "$175",
+					"label": "Double Queen"
+				}
+			]
+		},
+		{
+			"name": "Holiday Inn Express Troutdale",
+			"image": {
+				"large": "hotel_holidayinn.jpg",
+				"thumb": "hotel_holidayinn__thumb.jpg"
+			},
+			"address": ["477NW Phoenix Dr", "Troutdale, OR 97060"],
+			"contact": {
+				"name": "Art Trafton",
+				"email": "atrafton@gorgehotels.com",
+				"phone": "(503) 669-6500",
+				"url": "https://www.ihg.com/holidayinnexpress/hotels/us/en/troutdale/ttdtd/hoteldetail"
+			},
+			"rooms": [
+				{
+					"price": "$189",
+					"label": "Classic King"
+				}
+			]
+		}
+	],
+	"other": [
+		{
+			"name": "Best Western Plus Cascade Inn & Suites",
+			"address": ["23525 NE Halsey St", "Troutdale, OR 97060"],
+			"contact": {
+				"phone": "(503) 491-9700",
+				"url": "https://www.bestwestern.com/en_US/book/hotels-in-troutdale/best-western-plus-cascade-inn-suites/propertyCode.38140.html"
+			}
+		},
+		{
+			"name": "Travelodge by Wyndham Gresham",
+			"address": ["23705 NE Sandy Blvd", "Troutdale, OR 97060"],
+			"contact": {
+				"phone": "(503) 666-6623",
+				"url": "https://www.wyndhamhotels.com/travelodge/troutdale-oregon/travelodge-east-portland-gresham/overview"
+			}
+		},
+		{
+			"name": "Motel 6 Troutdale",
+			"address": ["1610 NW Frontage Rd", "Troutdale, OR 97060"],
+			"contact": {
+				"phone": "(503) 665-2254",
+				"url": "https://www.motel6.com/en/motels.or.troutdale.407.html"
+			}
+		},
+		{
+			"name": "McMenamins Edgefield",
+			"address": ["2126 SW Halsey St", "Troutdale, OR 97060"],
+			"contact": {
+				"phone": "(503) 669-8610",
+				"url": "https://reserve.mcmenamins.com/mcmenamins/"
+			}
+		}
+	]
+}

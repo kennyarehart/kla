@@ -118,9 +118,9 @@ ul {
 	-webkit-box-shadow: 2px 3px 13px 1px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-br {
-	display: none;
-}
+// .mobile-br {
+// 	display: none;
+// }
 
 //-------------------------------------------------------------------------------
 // DISABLE
@@ -149,7 +149,7 @@ ul {
 		top: 0;
 	}
 	.sub-lock {
-		margin-top: 21vh;
+		margin-top: 20vh;
 	}
 
 	// hack? - change this to make scroll numbers work
@@ -163,7 +163,7 @@ ul {
 		background: $colorNeutral;
 		margin: 0;
 		padding: 2vw 5vw 0vw 5vw;
-		height: 15vh;
+		height: 14vh;
 		// box-shadow: 0 4px 8px 0 $colorNeutral;
 
 		h1 {
@@ -171,9 +171,9 @@ ul {
 			// margin-top: 0.6em;
 			// margin-bottom: 0.3em;
 		}
-		.mobile-br {
-			display: block;
-		}
+		// .mobile-br {
+		// 	display: block;
+		// }
 	}
 
 	// ::::: _accomodations :::::

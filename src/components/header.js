@@ -1,19 +1,24 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import ReactHtmlParser from 'react-html-parser'
 import Device from '../js/fat/lib/Device'
-import siteData from '../data/siteData.json'
 import ScrollWatcher from '../js/ScrollWatcher'
 import GlobalManager from '../js/GlobalManager'
+import sectionData from '../data/sectionData.json'
+import headerData from '../data/headerData.json'
+import { getDomainKey, getDeviceKey } from '../js/utils'
 
 class Header extends Component {
-	// deprecated. Find alt solution later
-	componentWillMount() {
-		GlobalManager.registerHeader(this, this.updateMe)
+	constructor(props) {
+		super(props)
+		const jsonVal = headerData[getDomainKey()][getDeviceKey()]
+		this.txt = ReactHtmlParser(jsonVal)
 	}
 
-	componentDidMount() {
+	// deprecated. Find alt solution later
+	componentWillMount() {
 		const T = this
-		ScrollWatcher.register(T.scrollRef, 'lock')
+		GlobalManager.registerHeader(T, T.updateMe)
 	}
 
 	updateMe(isLocked) {
@@ -25,8 +30,13 @@ class Header extends Component {
 		}
 	}
 
+	componentDidMount() {
+		const T = this
+		ScrollWatcher.register(T.scrollRef, 'lock')
+	}
+
 	createLinks() {
-		return siteData.sections.active.map((val, i) => {
+		return sectionData.active.map((val, i) => {
 			return (
 				<Link to={val.path} key={i}>
 					{val.label}
@@ -36,11 +46,7 @@ class Header extends Component {
 	}
 
 	render() {
-		const title = (
-			<h1>
-				Ashley Weber +<br className="mobile-br" /> Kenny Arehart
-			</h1>
-		)
+		const title = <h1>{this.txt}</h1>
 		let mock = null
 		let nav = null
 		let lock = null

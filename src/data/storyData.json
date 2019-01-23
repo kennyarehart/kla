@@ -1,0 +1,156 @@
+{
+	"mobile": [
+		{
+			"image": {
+				"alk": {
+					"large": "m_standing_open.jpg",
+					"thumb": "m_standing_open__thumb.jpg"
+				},
+				"kla": {
+					"large": "m_hop_on_back.jpg",
+					"thumb": "m_hop_on_back__thumb.jpg"
+				}
+			},
+			"text": [
+				{ "id": ["a"], "align": "center", "style": "top:14vh;" },
+				{ "id": ["b"], "align": "left", "style": "top:70vh" },
+				{ "id": ["c"], "align": "right", "style": "top:77vh" }
+			]
+		},
+		{
+			"text": [
+				{ "id": ["d"], "align": "left", "style": "top: 12vh" },
+				{ "id": ["e"], "align": "right", "style": "bottom: 12vh" }
+			]
+		},
+		{
+			"text": [{ "id": ["f"], "align": "center", "style": "bottom: 14vh" }],
+			"image": { "large": "m_standing_embraced.jpg", "thumb": "m_standing_embraced__thumb.jpg" }
+		},
+		{
+			"text": [{ "id": ["g", "h", "i"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"text": [{ "id": ["j", "k"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"text": [{ "id": ["l"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"text": [
+				{ "id": ["m", "n", "o"], "align": "center", "style": "top: 20vh;" },
+				{ "id": ["p"], "align": "center", "style": "bottom: 40vh;" }
+			]
+		},
+		{
+			"text": [{ "id": ["q"], "align": "center", "style": "bottom: 20vh;" }]
+		},
+		{
+			"text": [{ "id": ["r"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"image": { "large": "m_sit_ukulele.jpg", "thumb": "m_sit_ukulele__thumb.jpg" },
+			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"text": [{ "id": ["v"], "align": "center", "style": "top: 40vh;" }]
+		}
+	],
+	"desktop": [
+		{
+			"image": {
+				"kla": { "large": "d_hop_on_back.jpg", "thumb": "d_hop_on_back__thumb.jpg" },
+				"alk": { "large": "d_standing_open.jpg", "thumb": "d_standing_open__thumb.jpg" }
+			},
+			"text": [
+				{ "id": ["a"], "align": "center", "style": "top:14vh;" },
+				{ "id": ["b", "c"], "align": "right", "style": "bottom:35vh" }
+			]
+		},
+		{
+			"text": [
+				{ "id": ["d"], "align": "left", "style": "top: 14vh; width: 40vw;" },
+				{ "id": ["e"], "align": "right", "style": "top: 60vh;" }
+			]
+		},
+		{
+			"text": [
+				{ "id": ["f"], "align": "right", "style": "bottom: 20vh; width: 40vw; marginRight: 17vw; right: 0;" }
+			],
+			"image": { "large": "d_standing_embraced.jpg", "thumb": "d_standing_embraced__thumb.jpg" }
+		},
+		{
+			"text": [{ "id": ["g", "h", "i"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"text": [{ "id": ["j", "k"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"text": [{ "id": ["l"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"text": [
+				{ "id": ["m", "n", "o"], "align": "center", "style": "top: 20vh;" },
+				{ "id": ["p"], "align": "center", "style": "bottom: 40vh;" }
+			]
+		},
+		{
+			"text": [{ "id": ["q"], "align": "center", "style": "bottom: 20vh;" }]
+		},
+		{
+			"text": [{ "id": ["r"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"image": { "large": "d_sit_ukulele.jpg", "thumb": "d_sit_ukulele__thumb.jpg" },
+			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 40vh;" }]
+		},
+		{
+			"text": [{ "id": ["v"], "align": "center", "style": "top: 40vh;" }]
+		}
+	],
+	"full": {
+		"a": {
+			"alk": "Ashley LOVES Kenny",
+			"kla": "Kenny LOVES Ashley"
+		},
+		"b": "It all started ",
+		"c": "with a fire & a question...",
+		"d": "Literally, we met at bonfire on Dockweiler Beach in 2011.",
+		"e": {
+			"alk": "Asked a random group:<br>'Can we share a fire pit?'<br>...and there he was!",
+			"kla": "'Can we share your fire pit?'<br>a group randomly asked me<br>...and there she was!"
+		},
+		"f": "This is a story of questions; important ones that have shaped our lives for the better.",
+		"g": "5 years later, we reconnected when ",
+		"h": {
+			"kla": "I got a text... from Ashley!<br>Being so bold, it was more of a ",
+			"alk": "I decided to be bold & text Kenny. <br>With the sentiment of a "
+		},
+		"i": "question in statement form:<br>'Hey, we should get drinks sometime.'",
+		"j": "A spark ignited. We knew this special, ",
+		"k": {
+			"kla": "but I was getting ready to move to Oregon.",
+			"alk": "but Kenny was getting ready to move to Oregon."
+		},
+		"l": "Ready for the challenge of long distance, we saw each other as often as we could over the next 4 months.",
+		"m": "While exchanging Christmas gifts, ",
+		"n": {
+			"kla": "this time I had a question for her:<br>",
+			"alk": "Kenny surpised me with a key & a question:<br>"
+		},
+		"o": "'Will you move to Portland with me?'",
+		"p": {
+			"kla": "Ashley, being bold again, said yes!",
+			"alk": "I, of course, said yes!"
+		},
+		"q": "Big moves followed: Road trip to move Ashley to Oregon, an apartment in awesome SE Portland, & finally we bought our project house that we have turned into our home.",
+		"r": "Travel has been a huge part in building our life together. After many trips all over the states, we decided it was time for a month off of life! SE Asia was the destination!",
+		"s": "While hiking in Ubud, Bali, Indonesia, ",
+		"t": {
+			"alk": "Kenny (with the help of his ukulele) asked the biggest question yet:",
+			"kla": "Kenny LOVES Ashley"
+		},
+		"u": "<br>'Will you marry me?'",
+		"v": "Ashley, of course, said yes!!"
+	}
+}

@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import siteData from '../data/siteData.json'
-import Device from '../js/fat/lib/Device'
+import storyData from '../data/storyData.json'
+// import Device from '../js/fat/lib/Device'
 import ProgressiveImage from 'react-progressive-image'
 import { TweenLite, TimelineMax } from 'gsap'
 import { rel } from '@ff0000-ad-tech/ad-utils/lib/MathUtils'
 import ReactHtmlParser from 'react-html-parser'
+import { getDomainKey, getDeviceKey } from '../js/utils'
 
 const path = './images/story/'
-const jsonImageNode = Device.type === 'mobile' ? 'mobile' : 'desktop'
+const jsonImageNode = getDeviceKey()
+const domainKey = getDomainKey()
 
 class Story extends Component {
 	constructor(props) {
@@ -42,7 +44,7 @@ class Story extends Component {
 		T.btnNextRef.onclick = T.handleManualNext.bind(T)
 
 		// iterate through images and texts to make a timeline
-		const json = siteData.story[jsonImageNode]
+		const json = storyData[jsonImageNode]
 
 		let indexes = {
 			text: 0,
@@ -75,7 +77,7 @@ class Story extends Component {
 
 		// store percent (0-1) of timeline that a single slide takes
 		T.percentPerSlide = 1 / (json.length - 1)
-		console.log('percentPerSlide:', T.percentPerSlide)
+		// console.log('percentPerSlide:', T.percentPerSlide)
 	}
 
 	handleTouchStart(event) {
@@ -161,7 +163,7 @@ class Story extends Component {
 
 	settle(time, percent) {
 		const T = this
-		console.log('settle() to percent:', percent)
+		// console.log('settle() to percent:', percent)
 		// tween it, but store tween to kill if needed
 		T.settleTween = TweenLite.to(T.tl, time, {
 			progress: percent,
@@ -213,14 +215,20 @@ class Story extends Component {
 		// console.log(this.state)
 		const images = []
 		const texts = []
-		// console.warn(this.state.current, siteData.story.length)
-		for (let i = 0; i < siteData.story[jsonImageNode].length; i++) {
-			const jsonAt = siteData.story[jsonImageNode][i]
+		// console.warn(this.state.current, storyData.length)
+		for (let i = 0; i < storyData[jsonImageNode].length; i++) {
+			const jsonAt = storyData[jsonImageNode][i]
 			if (jsonAt.image) {
-				const img = jsonAt.image
+				let img = jsonAt.image
 				let child = null
 				// this will add the progressive image, perhaps mod to pass in a "load" param so the thumb is there for sure?
 				if (i < this.state.current) {
+					// check for different domain versions first:
+					const hasLarge = img['large'] !== undefined
+					if (!hasLarge) {
+						img = img[domainKey]
+					}
+					//
 					child = (
 						<ProgressiveImage src={path + img.large} placeholder={path + img.thumb}>
 							{(src, loading) => {
@@ -254,9 +262,21 @@ class Story extends Component {
 									}
 								})
 							}
+
+							let txt = ''
+							obj.id.forEach(val => {
+								let lookup = storyData.full[val]
+								// check if text is an Object first: use domain based key
+								if (typeof lookup != 'string') {
+									lookup = lookup[domainKey]
+								}
+
+								txt += lookup
+							})
+
 							return (
 								<div key={i + '-' + k} className={c} style={style}>
-									<div>{ReactHtmlParser(obj.text)}</div>
+									<div>{ReactHtmlParser(txt)}</div>
 								</div>
 							)
 						})}

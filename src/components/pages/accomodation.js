@@ -1,5 +1,5 @@
 import React from 'react'
-import siteData from '../../data/siteData.json'
+import accomodationData from '../../data/accomodationData.json'
 import Section from '../Section'
 import ProgressiveImage from 'react-progressive-image'
 
@@ -33,15 +33,16 @@ class Accomodation extends Section {
 				</div>
 				<div>
 					<div className="hotels-holder end-capped">
-						{siteData.hotels.reserved.map((o, i) => {
+						{accomodationData.reserved.map((o, i) => {
 							return (
 								<div key={i} className="hotel-single">
-									{/* <img src={path + o.image} className="large-img shadow" alt={o.image} /> */}
-									<ProgressiveImage src={path + o.image.large} placeholder={path + o.image.thumb}>
+									<img src={path + o.image.large} className="large-img shadow" alt={o.image.thumb} />
+									{/* Progressive Image breaks the scroll header because of thumb height. TODO - fix? */}
+									{/* <ProgressiveImage src={path + o.image.large} placeholder={path + o.image.thumb}>
 										{(src, loading) => {
 											return <img style={{ opacity: loading ? 0.4 : 1 }} src={src} />
 										}}
-									</ProgressiveImage>
+									</ProgressiveImage> */}
 									<h3>{o.name}</h3>
 									<p className="hotel-chunk">
 										{o.address[0]}
@@ -49,7 +50,9 @@ class Accomodation extends Section {
 										{o.address[1]}
 									</p>
 									<p className="hotel-chunk">
-										<a href={o.contact.url}>Website</a>
+										<a href={o.contact.url} target="_blank">
+											Website
+										</a>
 									</p>
 									<p className="hotel-chunk">
 										Contact | {o.contact.name}
@@ -83,7 +86,7 @@ class Accomodation extends Section {
 						Portland areas, feel free! Here are a few suggestions in Troutdale:
 					</p>
 					<div className="hotels-holder non-reserved">
-						{siteData.hotels.other.map((o, i) => {
+						{accomodationData.other.map((o, i) => {
 							return (
 								<div key={i} className="hotel-single">
 									<h3>{o.name}</h3>
@@ -93,7 +96,9 @@ class Accomodation extends Section {
 										{o.address[1]}
 									</p>
 									<p className="hotel-chunk">
-										<a href="#">Website</a>
+										<a href={o.contact.url} target="_blank">
+											Website
+										</a>
 									</p>
 									<p className="hotel-chunk">{o.contact.phone}</p>
 								</div>

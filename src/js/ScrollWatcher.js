@@ -11,12 +11,13 @@ export default class ScrollWatcher {
 			ref: ref,
 			css: css
 		})
-		console.log('pool is now:', T._pool)
 	}
 
 	static toggle = isPast => {
 		const T = ScrollWatcher
+
 		if (isPast !== T._isPast) {
+			// console.log(':: scrollWatcher :: toggle()')
 			T._isPast = isPast
 
 			T._pool.forEach(item => {
