@@ -102,7 +102,7 @@
 		},
 		{
 			"image": { "large": "d_sit_ukulele.jpg", "thumb": "d_sit_ukulele__thumb.jpg" },
-			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 40vh;" }]
+			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 50vh; width: 70vw; marginLeft: 15vw;" }]
 		},
 		{
 			"text": [{ "id": ["v"], "align": "center", "style": "top: 40vh;" }]
@@ -145,12 +145,15 @@
 		},
 		"q": "Big moves followed: Road trip to move Ashley to Oregon, an apartment in awesome SE Portland, & finally we bought our project house that we have turned into our home.",
 		"r": "Travel has been a huge part in building our life together. After many trips all over the states, we decided it was time for a month off of life! SE Asia was the destination!",
-		"s": "While hiking in Ubud, Bali, Indonesia, ",
+		"s": "Ubud, Bali, Indonesia.<br>While on a hike, ",
 		"t": {
-			"alk": "Kenny (with the help of his ukulele) asked the biggest question yet:",
-			"kla": "Kenny LOVES Ashley"
+			"alk": "with the help of his ukulele, Kenny asked the biggest question yet:",
+			"kla": "with my trusty ukulele, I asked the biggest question yet:"
 		},
 		"u": "<br>'Will you marry me?'",
-		"v": "Ashley, of course, said yes!!"
+		"v": {
+			"alk": "I, of course, said yes!!!",
+			"kla": "She said yes!!!"
+		}
 	}
 }
