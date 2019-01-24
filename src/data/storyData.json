@@ -24,36 +24,63 @@
 			]
 		},
 		{
-			"text": [{ "id": ["f"], "align": "center", "style": "bottom: 14vh" }],
-			"image": { "large": "m_standing_embraced.jpg", "thumb": "m_standing_embraced__thumb.jpg" }
+			"text": [{ "id": ["f"], "align": "center", "style": "top: 6vh" }],
+			"image": {
+				"alk": { "large": "m_standing_embraced.jpg", "thumb": "m_standing_embraced__thumb.jpg" },
+				"kla": { "large": "m_timber.jpg", "thumb": "m_timber__thumb.jpg" }
+			}
 		},
 		{
-			"text": [{ "id": ["g", "h", "i"], "align": "center", "style": "top: 40vh;" }]
+			"image": {
+				"alk": { "large": "m_tulip.jpg", "thumb": "m_tulip__thumb.jpg" },
+				"kla": { "large": "m_nola.jpg", "thumb": "m_nola__thumb.jpg" }
+			},
+			"text": [
+				{ "id": ["g", "h"], "align": "center", "style": "top: 6vh" },
+				{ "id": ["i"], "align": "center", "style": "bottom: 6vh" }
+			]
 		},
 		{
-			"text": [{ "id": ["j", "k"], "align": "center", "style": "top: 40vh;" }]
+			"text": [{ "id": ["j", "k"], "align": "center", "style": "top: 6vh;" }]
 		},
 		{
+			"image": { "large": "m_standing_embraced.jpg", "thumb": "m_standing_embraced__thumb.jpg" },
 			"text": [{ "id": ["l"], "align": "center", "style": "top: 40vh;" }]
 		},
 		{
+			"image": {
+				"kla": { "large": "m_moveup_1.jpg", "thumb": "m_moveup_1__thumb.jpg" },
+				"alk": { "large": "m_moveup_2.jpg", "thumb": "m_moveup_2__thumb.jpg" }
+			},
 			"text": [
-				{ "id": ["m", "n", "o"], "align": "center", "style": "top: 20vh;" },
-				{ "id": ["p"], "align": "center", "style": "bottom: 40vh;" }
+				{ "id": ["m", "n"], "align": "center", "style": "bottom: 45vh;" },
+				{ "id": ["o"], "align": "center", "style": "bottom: 30vh;" },
+				{ "id": ["p"], "align": "center", "style": "bottom: 20vh;" }
 			]
 		},
 		{
 			"text": [{ "id": ["q"], "align": "center", "style": "bottom: 20vh;" }]
 		},
 		{
-			"text": [{ "id": ["r"], "align": "center", "style": "top: 40vh;" }]
+			"image": {
+				"kla": { "large": "m_indo_1.jpg", "thumb": "m_indo_1__thumb.jpg" },
+				"alk": { "large": "m_indo_2.jpg", "thumb": "m_indo_2__thumb.jpg" }
+			},
+			"text": [
+				{ "id": ["r"], "align": "left", "style": "top: 16vh;" },
+				{ "id": ["r2"], "align": "right", "style": "bottom: 16vh;" }
+			]
 		},
 		{
-			"image": { "large": "m_sit_ukulele.jpg", "thumb": "m_sit_ukulele__thumb.jpg" },
+			"image": {
+				"alk": { "large": "m_ukulele_1.jpg", "thumb": "m_ukulele_1__thumb.jpg" },
+				"kla": { "large": "m_ukulele_2.jpg", "thumb": "m_ukulele_2__thumb.jpg" }
+			},
 			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 40vh;" }]
 		},
 		{
-			"text": [{ "id": ["v"], "align": "center", "style": "top: 40vh;" }]
+			"image": { "large": "m_yes.jpg", "thumb": "m_yes__thumb.jpg" },
+			"text": [{ "id": ["v"], "align": "center", "style": "top: 14vh;" }]
 		}
 	],
 	"desktop": [
@@ -67,48 +94,78 @@
 				{ "id": ["b", "c"], "align": "right", "style": "bottom:35vh" }
 			]
 		},
+
 		{
 			"text": [
-				{ "id": ["d"], "align": "left", "style": "top: 14vh; width: 40vw;" },
-				{ "id": ["e"], "align": "right", "style": "top: 60vh;" }
+				{ "id": ["d"], "align": "left", "style": "top: 20vh; width: 40vw; left: 6vw" },
+				{ "id": ["e"], "align": "right", "style": "top: 62vh; right:6vw" }
+			]
+		},
+		{
+			"image": {
+				"alk": { "large": "d_falls.jpg", "thumb": "d_falls__thumb.jpg" },
+				"kla": { "large": "d_timber.jpg", "thumb": "d_timber__thumb.jpg" }
+			},
+			"text": [{ "id": ["f"], "align": "center", "style": "top: 20vh; width: 50vw; marginLeft: 16vw" }]
+		},
+		{
+			"image": {
+				"alk": { "large": "d_rice.jpg", "thumb": "d_rice__thumb.jpg" },
+				"kla": { "large": "d_coast_fr.jpg", "thumb": "d_coast_fr__thumb.jpg" }
+			},
+			"text": [
+				{ "id": ["g", "h", "i"], "align": "left", "style": "bottom: 31vh; width: 42vw; marginLeft: 18vw;" }
 			]
 		},
 		{
 			"text": [
-				{ "id": ["f"], "align": "right", "style": "bottom: 20vh; width: 40vw; marginRight: 17vw; right: 0;" }
-			],
-			"image": { "large": "d_standing_embraced.jpg", "thumb": "d_standing_embraced__thumb.jpg" }
-		},
-		{
-			"text": [{ "id": ["g", "h", "i"], "align": "center", "style": "top: 40vh;" }]
-		},
-		{
-			"text": [{ "id": ["j", "k"], "align": "center", "style": "top: 40vh;" }]
-		},
-		{
-			"text": [{ "id": ["l"], "align": "center", "style": "top: 40vh;" }]
-		},
-		{
-			"text": [
-				{ "id": ["m", "n", "o"], "align": "center", "style": "top: 20vh;" },
-				{ "id": ["p"], "align": "center", "style": "bottom: 40vh;" }
+				{
+					"id": ["j", "k", "br", "br", "l"],
+					"align": "left",
+					"style": "top: 35vh; width: 42vw; marginLeft: 18vw;"
+				}
 			]
 		},
 		{
-			"text": [{ "id": ["q"], "align": "center", "style": "bottom: 20vh;" }]
+			"image": {
+				"kla": { "large": "d_moveup_1.jpg", "thumb": "d_moveup_1__thumb.jpg" },
+				"alk": { "large": "d_moveup_2.jpg", "thumb": "d_moveup_2__thumb.jpg" }
+			},
+			"text": [
+				{ "id": ["m", "n", "o"], "align": "center", "style": "top: 16vh;" },
+				{ "id": ["p"], "align": "right", "style": "bottom: 10vh; width: 30vw; right: 6vw" }
+			]
 		},
 		{
-			"text": [{ "id": ["r"], "align": "center", "style": "top: 40vh;" }]
+			"text": [{ "id": ["q"], "align": "center", "style": "top: 16vh; width: 70vw; marginLeft: 15vw" }]
 		},
 		{
-			"image": { "large": "d_sit_ukulele.jpg", "thumb": "d_sit_ukulele__thumb.jpg" },
-			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 50vh; width: 70vw; marginLeft: 15vw;" }]
+			"image": {
+				"kla": { "large": "d_indo_1.jpg", "thumb": "d_indo_1__thumb.jpg" },
+				"alk": { "large": "d_indo_2.jpg", "thumb": "d_indo_2__thumb.jpg" }
+			},
+			"text": [
+				{
+					"id": ["r", "r2"],
+					"align": "center",
+					"style": "bottom: 25vh; width: 35vw; marginRight: 15vw; right: 0"
+				}
+			]
 		},
 		{
-			"text": [{ "id": ["v"], "align": "center", "style": "top: 40vh;" }]
+			"image": {
+				"alk": { "large": "d_ukulele_1.jpg", "thumb": "d_ukulele_2__thumb.jpg" },
+				"kla": { "large": "d_ukulele_2.jpg", "thumb": "d_ukulele_2__thumb.jpg" }
+			},
+			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 47vh; width: 70vw; marginLeft: 15vw;" }]
+		},
+		{
+			"image": { "large": "d_engaged.jpg", "thumb": "d_engaged__thumb.jpg" },
+			"text": [{ "id": ["v"], "align": "center", "style": "bottom: 12vh;" }]
 		}
 	],
 	"full": {
+		"br": "<br>",
 		"a": {
 			"alk": "Ashley LOVES Kenny",
 			"kla": "Kenny LOVES Ashley"
@@ -123,8 +180,8 @@
 		"f": "This is a story of questions; important ones that have shaped our lives for the better.",
 		"g": "5 years later, we reconnected when ",
 		"h": {
-			"kla": "I got a text... from Ashley!<br>Being so bold, it was more of a ",
-			"alk": "I decided to be bold & text Kenny. <br>With the sentiment of a "
+			"kla": "I got a text... from Ashley! Being so bold, it was more of a ",
+			"alk": "I decided to be bold & text Kenny. With the sentiment of a "
 		},
 		"i": "question in statement form:<br>'Hey, we should get drinks sometime.'",
 		"j": "A spark ignited. We knew this special, ",
@@ -132,7 +189,7 @@
 			"kla": "but I was getting ready to move to Oregon.",
 			"alk": "but Kenny was getting ready to move to Oregon."
 		},
-		"l": "Ready for the challenge of long distance, we saw each other as often as we could over the next 4 months.",
+		"l": "Despite long distance, we saw each other every chance we could over the next 4 months.",
 		"m": "While exchanging Christmas gifts, ",
 		"n": {
 			"kla": "this time I had a question for her:<br>",
@@ -143,8 +200,9 @@
 			"kla": "Ashley, being bold again, said yes!",
 			"alk": "I, of course, said yes!"
 		},
-		"q": "Big moves followed: Road trip to move Ashley to Oregon, an apartment in awesome SE Portland, & finally we bought our project house that we have turned into our home.",
-		"r": "Travel has been a huge part in building our life together. After many trips all over the states, we decided it was time for a month off of life! SE Asia was the destination!",
+		"q": "Big moves: Road trip to move Ashley to Oregon, an apartment in SE Portland, & finally we bought our project house; our home!",
+		"r": "Travel has been a huge part in building our life together. ",
+		"r2": "After many trips all over the states, we decided it was time for a month off of life! SE Asia was the destination!",
 		"s": "Ubud, Bali, Indonesia.<br>While on a hike, ",
 		"t": {
 			"alk": "with the help of his ukulele, Kenny asked the biggest question yet:",
