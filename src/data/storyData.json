@@ -44,8 +44,11 @@
 			"text": [{ "id": ["j", "k"], "align": "center", "style": "top: 6vh;" }]
 		},
 		{
-			"image": { "large": "m_standing_embraced.jpg", "thumb": "m_standing_embraced__thumb.jpg" },
-			"text": [{ "id": ["l"], "align": "center", "style": "top: 40vh;" }]
+			"image": {
+				"alk": { "large": "m_coast.jpg", "thumb": "m_coast__thumb.jpg" },
+				"kla": { "large": "m_eiffle.jpg", "thumb": "m_eiffle__thumb.jpg" }
+			},
+			"text": [{ "id": ["l"], "align": "right", "style": "top: 6vh; width: 60vw; right: 0" }]
 		},
 		{
 			"image": {
@@ -67,8 +70,8 @@
 				"alk": { "large": "m_indo_2.jpg", "thumb": "m_indo_2__thumb.jpg" }
 			},
 			"text": [
-				{ "id": ["r"], "align": "left", "style": "top: 16vh;" },
-				{ "id": ["r2"], "align": "right", "style": "bottom: 16vh;" }
+				{ "id": ["r"], "align": "left", "style": "top: 6vh;" },
+				{ "id": ["r2"], "align": "right", "style": "top: 21vh;" }
 			]
 		},
 		{
