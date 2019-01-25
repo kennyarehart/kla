@@ -3,9 +3,13 @@ import React from 'react'
 // import MapContainer from '../map-container'
 import Section from '../Section'
 
+// import ImgRow from '../img-row'
+
 class WhenWhere extends Section {
 	render() {
 		return (
+			// <div>
+			// 	<ImgRow />
 			<div className="when-where-page" ref={div => (this.scrollRef = div)}>
 				<div>
 					<div className="buffered-content">
@@ -77,6 +81,8 @@ class WhenWhere extends Section {
 					</div>
 				</div>
 			</div>
+			// 	<ImgRow />
+			// </div>
 		)
 	}
 }

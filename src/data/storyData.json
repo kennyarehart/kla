@@ -62,7 +62,7 @@
 			]
 		},
 		{
-			"text": [{ "id": ["q"], "align": "center", "style": "bottom: 20vh;" }]
+			"text": [{ "id": ["q", "q1", "q2"], "align": "center", "style": "bottom: 20vh;" }]
 		},
 		{
 			"image": {
@@ -140,7 +140,9 @@
 			]
 		},
 		{
-			"text": [{ "id": ["q"], "align": "center", "style": "top: 16vh; width: 70vw; marginLeft: 15vw" }]
+			"text": [
+				{ "id": ["q", "q1", "q2"], "align": "center", "style": "top: 16vh; width: 70vw; marginLeft: 15vw" }
+			]
 		},
 		{
 			"image": {
@@ -177,8 +179,8 @@
 		"c": "with a fire & a question...",
 		"d": "Literally, we met at bonfire on Dockweiler Beach in 2011.",
 		"e": {
-			"alk": "Asked a random group:<br>'Can we share a fire pit?'<br>...and there he was!",
-			"kla": "'Can we share your fire pit?'<br>a group randomly asked me<br>...and there she was!"
+			"alk": "Asked a random group:<br>\"Can we share a fire pit?\"<br>...and there he was!",
+			"kla": "\"Can we share your fire pit?\"<br>a group randomly asked me<br>...and there she was!"
 		},
 		"f": "This is a story of questions; important ones that have shaped our lives for the better.",
 		"g": "5 years later, we reconnected when ",
@@ -186,7 +188,7 @@
 			"kla": "I got a text... from Ashley! Being so bold, it was more of a ",
 			"alk": "I decided to be bold & text Kenny. With the sentiment of a "
 		},
-		"i": "question in statement form:<br>'Hey, we should get drinks sometime.'",
+		"i": "question in statement form:<br>\"Hey, we should get drinks sometime.\"",
 		"j": "A spark ignited. We knew this special, ",
 		"k": {
 			"kla": "but I was getting ready to move to Oregon.",
@@ -198,12 +200,17 @@
 			"kla": "this time I had a question for her:<br>",
 			"alk": "Kenny surpised me with a key & a question:<br>"
 		},
-		"o": "'Will you move to Portland with me?'",
+		"o": "\"Will you move to Portland with me?\"",
 		"p": {
 			"kla": "Ashley, being bold again, said yes!",
 			"alk": "I, of course, said yes!"
 		},
-		"q": "Big moves: Road trip to move Ashley to Oregon, an apartment in SE Portland, & finally we bought our project house; our home!",
+		"q": "Big moves: Road trip to move ",
+		"q1": {
+			"alk": "me ",
+			"kla": "Ashley "
+		},
+		"q2": "to Oregon, an apartment in SE Portland, & finally we bought our project house; our home!",
 		"r": "Travel has been a huge part in building our life together. ",
 		"r2": "After many trips all over the states, we decided it was time for a month off of life! SE Asia was the destination!",
 		"s": "Ubud, Bali, Indonesia.<br>While on a hike, ",
@@ -211,7 +218,7 @@
 			"alk": "with the help of his ukulele, Kenny asked the biggest question yet:",
 			"kla": "with my trusty ukulele, I asked the biggest question yet:"
 		},
-		"u": "<br>'Will you marry me?'",
+		"u": "<br>\"Will you marry me?\"",
 		"v": {
 			"alk": "I, of course, said yes!!!",
 			"kla": "She said yes!!!"

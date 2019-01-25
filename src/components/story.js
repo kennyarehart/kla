@@ -267,7 +267,7 @@ class Story extends Component {
 							obj.id.forEach(val => {
 								let lookup = storyData.full[val]
 								// check if text is an Object first: use domain based key
-								if (typeof lookup != 'string') {
+								if (typeof lookup !== 'string') {
 									lookup = lookup[domainKey]
 								}
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import accomodationData from '../../data/accomodationData.json'
 import Section from '../Section'
-import ProgressiveImage from 'react-progressive-image'
+// import ProgressiveImage from 'react-progressive-image'
+// import ImgRow from '../img-row'
 
 const path = './images/hotel/'
 
@@ -17,6 +18,8 @@ class Accomodation extends Section {
 	}
 	render() {
 		return (
+			// <div>
+			// 	<ImgRow />
 			<div className="accomodations-page" ref={div => (this.scrollRef = div)}>
 				<div className="buffered-content">
 					<h2>Accommodations</h2>
@@ -116,6 +119,8 @@ class Accomodation extends Section {
 					</p>
 				</div>
 			</div>
+			// 	<ImgRow />
+			// </div>
 		)
 	}
 }
