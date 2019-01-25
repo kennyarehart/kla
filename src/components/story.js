@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import storyData from '../data/storyData.json'
-// import Device from '../js/fat/lib/Device'
 import ProgressiveImage from 'react-progressive-image'
 import { TweenLite, TimelineMax } from 'gsap'
 import { rel } from '@ff0000-ad-tech/ad-utils/lib/MathUtils'
@@ -18,8 +17,6 @@ class Story extends Component {
 		const T = this
 		T.state = {
 			image: props.placeholder,
-			// loading: true,
-			// srcSetData: { srcSet: '', sizes: '' },
 			current: 1
 		}
 		T.galleryRef = null
@@ -36,13 +33,17 @@ class Story extends Component {
 
 	componentDidMount() {
 		const T = this
-		// add listeners for touch
-		T.hitbox.ontouchstart = T.handleTouchStart.bind(T)
-		T.hitbox.ontouchend = T.handleTouchEnd.bind(T)
-		T.hitbox.ontouchmove = T.handleTouchMove.bind(T)
-
-		T.btnPrevRef.onclick = T.handleManualPrev.bind(T)
-		T.btnNextRef.onclick = T.handleManualNext.bind(T)
+		if (Device.type === 'desktop') {
+			T.btnPrevRef.onclick = T.handleManualPrev.bind(T)
+			T.btnNextRef.onclick = T.handleManualNext.bind(T)
+		} else {
+			// add listeners for touch
+			T.hitbox.ontouchstart = T.handleTouchStart.bind(T)
+			T.hitbox.ontouchend = T.handleTouchEnd.bind(T)
+			T.hitbox.ontouchmove = T.handleTouchMove.bind(T)
+			T.btnPrevRef.style.display = 'none'
+			T.btnNextRef.style.display = 'none'
+		}
 
 		// iterate through images and texts to make a timeline
 		const json = storyData[jsonImageNode]
@@ -168,7 +169,14 @@ class Story extends Component {
 		// tween it, but store tween to kill if needed
 		T.settleTween = TweenLite.to(T.tl, time, {
 			progress: percent,
-			onComplete: () => (T.settleTween = null)
+			onComplete: () => {
+				// check for rounding error falling just short
+				let currentTime = T.tl.time()
+				if (currentTime != Math.round(currentTime)) {
+					T.tl.time(Math.round(currentTime))
+				}
+				T.settleTween = null
+			}
 		})
 	}
 

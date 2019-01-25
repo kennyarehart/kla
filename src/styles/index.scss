@@ -132,9 +132,6 @@ ul {
 	}
 
 	.story {
-		button {
-			display: none;
-		}
 		.hitbox {
 			position: absolute;
 			width: 100vw;
@@ -198,9 +195,6 @@ ul {
 
 	/* _story */
 	.story {
-		button {
-			display: none;
-		}
 		.hitbox {
 			position: absolute;
 			width: 100vw;
@@ -212,4 +206,11 @@ ul {
 			}
 		}
 	}
+}
+
+.test {
+	position: absolute;
+	z-index: 9999;
+	color: #fff;
+	font-size: 3em;
 }
