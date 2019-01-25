@@ -224,15 +224,17 @@ class Story extends Component {
 				// this will add the progressive image, perhaps mod to pass in a "load" param so the thumb is there for sure?
 				if (i < this.state.current) {
 					// check for different domain versions first:
-					const hasLarge = img['large'] !== undefined
-					if (!hasLarge) {
+					const hasSubDomain = img['alk'] !== undefined
+					if (hasSubDomain) {
 						img = img[domainKey]
 					}
 					//
+					const thumb = img.replace('.', '__thumb.')
+					//
 					child = (
-						<ProgressiveImage src={path + img.large} placeholder={path + img.thumb}>
+						<ProgressiveImage src={path + img} placeholder={path + thumb}>
 							{(src, loading) => {
-								return <img style={{ opacity: loading ? 0.4 : 1 }} src={src} alt={img.mobile} />
+								return <img style={{ opacity: loading ? 0.4 : 1 }} src={src} />
 							}}
 						</ProgressiveImage>
 					)
