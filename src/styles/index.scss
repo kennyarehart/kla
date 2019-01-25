@@ -3,7 +3,7 @@
 	padding: 0;
 }
 
-// @import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Lato:100,400,900');
+/* @import url('https://fonts.googleapis.com/css?family=Caveat+Brush|Lato:100,400,900'); */
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:700|Special+Elite|Cabin+Sketch:700');
 $colorDark: #0b2e3a;
 $colorMid: #1d657c;
@@ -30,13 +30,12 @@ body,
 	width: 100%;
 }
 
-//-------------------------------------------------------------------------------
 .buffered-content {
 	margin-left: 5vw;
 	max-width: calc(100% - 10vw);
 }
 
-// .content-container, // <-- messes up story gallery
+/* .content-container, <-- messes up story gallery */
 .when-where-page,
 .accomodations-page {
 	text-align: center;
@@ -118,17 +117,11 @@ ul {
 	-webkit-box-shadow: 2px 3px 13px 1px rgba(0, 0, 0, 0.1);
 }
 
-// .mobile-br {
-// 	display: none;
-// }
-
-//-------------------------------------------------------------------------------
-// DISABLE
+/* DISABLE */
 #timeline-day-of {
 	display: none;
 }
 
-//-------------------------------------------------------------------------------
 /* iPad */
 @media only screen and (min-device-width: 768px) {
 	.header {
@@ -136,9 +129,24 @@ ul {
 			font-size: 4em;
 		}
 	}
+
+	.story {
+		button {
+			display: none;
+		}
+		.hitbox {
+			position: absolute;
+			width: 100vw;
+			height: 100vh;
+		}
+		.gallery {
+			.txt-item {
+				font-size: 1.5em;
+			}
+		}
+	}
 }
 
-//-------------------------------------------------------------------------------
 /* Mobile */
 @media only screen and (max-device-width: 700px) {
 	h2 {
@@ -152,31 +160,25 @@ ul {
 		margin-top: 20vh;
 	}
 
-	// hack? - change this to make scroll numbers work
+	/* hack? - change this to make scroll numbers work */
 	.large-img {
 		max-width: 100%;
 	}
 
-	// ::::: _header ::::::
+	/* _header */
 	.header {
 		width: 100%;
 		background: $colorNeutral;
 		margin: 0;
 		padding: 2vw 5vw 0vw 5vw;
-		height: 14vh;
-		// box-shadow: 0 4px 8px 0 $colorNeutral;
+		/* height: 14vh;*/
 
 		h1 {
-			font-size: 3em;
-			// margin-top: 0.6em;
-			// margin-bottom: 0.3em;
+			font-size: 2.8em;
 		}
-		// .mobile-br {
-		// 	display: block;
-		// }
 	}
 
-	// ::::: _accomodations :::::
+	/* _accomodations */
 	.hotels-holder {
 		display: block;
 		max-width: 100%;
@@ -185,7 +187,7 @@ ul {
 		}
 	}
 
-	// :::::: _story ::::::
+	/* _story */
 	.story {
 		button {
 			display: none;
@@ -197,32 +199,8 @@ ul {
 		}
 		.gallery {
 			.txt-item {
-				// line-height: 1.5em;
 				font-size: 1.5em;
-
-				// .left,
-				// .right,
-				// .center {
-				// 	width: 92vw;
-				// 	margin-left: 4vw;
-				// 	margin-right: 4vw;
-				// }
 			}
 		}
 	}
 }
-
-// .img-row {
-// 	height: 100px;
-// 	width: 100%;
-// 	overflow: hidden;
-
-// 	.img-row-holder {
-// 		height: 100px;
-// 		white-space: nowrap;
-// 		> img {
-// 			max-height: 100%;
-// 			display: inline-block;
-// 		}
-// 	}
-// }

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import styles from './styles/index.scss'
+
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from './components/header'
 import Homepage from './components/pages/homepage'
@@ -7,12 +9,12 @@ import Accomodation from './components/pages/accomodation'
 import Registry from './components/pages/registry'
 import InTown from './components/pages/in-town'
 import Gallery from './components/pages/gallery'
-
 import InfiniteScroll from 'react-infinite-scroller'
 import Device from './js/fat/lib/Device'
 import sectionData from './data/sectionData.json'
-
 import ScrollWatcher from './js/ScrollWatcher'
+
+console.log(styles)
 
 const classes = { Homepage, WhenWhere, Accomodation, Registry, InTown, Gallery }
 function dynamicClass(name) {
@@ -47,12 +49,6 @@ class App extends Component {
 	loadItems(page) {
 		var T = this
 		console.log('loadItems()', page)
-		// if (page == this.state.initialCount) {
-		// 	T.setState({
-		// 		hasMoreItems: false
-		// 	})
-		// }
-
 		if (T.state.count < sectionData.active.length) {
 			T.setState({
 				count: page
@@ -93,7 +89,7 @@ class App extends Component {
 			})
 		}
 		return (
-			<Router>
+			<Router basename={'/'}>
 				<div className="App">
 					{header}
 					<div className="content-container">

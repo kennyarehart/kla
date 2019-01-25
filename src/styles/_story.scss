@@ -38,7 +38,7 @@
 			color: white;
 			line-height: 1.5em;
 			font-size: 2em;
-			text-shadow: $textShadow; // background-color: rgba(255, 0, 0, 0.1);
+			text-shadow: $textShadow;
 			> div {
 				position: absolute;
 			}
@@ -47,22 +47,17 @@
 			margin-left: 0;
 		}
 	}
-	// .hitbox {
-	// 	position: absolute;
-	// 	width: 100vw;
-	// 	height: 100vh;
-	// }
+
 	button {
 		position: absolute;
 		width: 20vw;
 		height: 100vh;
-		// background: rgba(0, 255, 0, 0.5);
 		cursor: pointer;
 		color: $colorLight;
 		font-family: 'Cabin Sketch', Arial;
 		font-size: 10em;
 		text-shadow: $textShadow;
-		//// RESET ////
+		/* RESET */
 		background: none;
 		border: 0;
 		padding: 0;

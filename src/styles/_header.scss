@@ -2,7 +2,6 @@
 	margin: 2vh 5vw 1.5vh 5vw;
 	max-width: calc(100% - 10vw);
 	text-align: center;
-	// margin: 0 auto;
 	a {
 		text-decoration: none;
 	}
@@ -23,13 +22,12 @@ nav {
 	}
 }
 
-// special for desktop + homepage
+/* special for desktop + homepage */
 .lock-over {
 	position: absolute;
 	z-index: 1;
 	width: 100%;
 	h1 {
 		color: $colorComp;
-		// text-shadow: $textShadow;
 	}
 }
