@@ -18,11 +18,11 @@
 			]
 		},
 		{
-			"text": [{ "id": ["f"], "align": "center", "style": "top: 6vh" }],
 			"image": {
 				"alk": "m_standing_embraced.jpg",
 				"kla": "m_timber.jpg"
-			}
+			},
+			"text": [{ "id": ["f"], "align": "center", "style": "top: 6vh" }]
 		},
 		{
 			"image": {
@@ -78,6 +78,86 @@
 		{
 			"image": "m_yes.jpg",
 			"text": [{ "id": ["v"], "align": "center", "style": "top: 14vh;" }]
+		}
+	],
+	"tablet": [
+		{
+			"image": {
+				"kla": "d_hop_on_back.jpg",
+				"alk": "d_standing_open.jpg"
+			},
+			"text": [
+				{ "id": ["a"], "align": "center", "style": "top:20vh;" },
+				{ "id": ["b", "c"], "align": "right", "style": "bottom:25vh" }
+			]
+		},
+
+		{
+			"text": [
+				{ "id": ["d"], "align": "left", "style": "top: 20vh; width: 40vw; left: 6vw" },
+				{ "id": ["e"], "align": "right", "style": "top: 62vh; right:6vw" }
+			]
+		},
+		{
+			"image": {
+				"alk": "d_falls.jpg",
+				"kla": "t_timber.jpg"
+			},
+			"text": [{ "id": ["f"], "align": "center", "style": "top: 20vh; width: 50vw; marginLeft: 16vw" }]
+		},
+		{
+			"image": {
+				"alk": "t_rice.jpg",
+				"kla": "t_coast_fr.jpg"
+			},
+			"text": [
+				{ "id": ["g", "h", "i"], "align": "left", "style": "bottom: 31vh; width: 42vw; marginLeft: 10vw;" }
+			]
+		},
+		{
+			"text": [
+				{
+					"id": ["j", "k", "br", "br", "l"],
+					"align": "left",
+					"style": "top: 35vh; width: 42vw; marginLeft: 10vw;"
+				}
+			]
+		},
+		{
+			"image": {
+				"kla": "d_moveup_1.jpg",
+				"alk": "d_moveup_2.jpg"
+			},
+			"text": [{ "id": ["m", "n", "o", "br", "br", "p"], "align": "center", "style": "top: 16vh;" }]
+		},
+		{
+			"text": [
+				{ "id": ["q", "q1", "q2"], "align": "center", "style": "top: 16vh; width: 70vw; marginLeft: 15vw" }
+			]
+		},
+		{
+			"image": {
+				"kla": "d_indo_1.jpg",
+				"alk": "t_indo_2.jpg"
+			},
+			"text": [
+				{
+					"id": ["r", "r2"],
+					"align": "center",
+					"style": "bottom: 25vh; width: 35vw; marginRight: 15vw; right: 0"
+				}
+			]
+		},
+		{
+			"image": {
+				"alk": "d_ukulele_1.jpg",
+				"kla": "d_ukulele_2.jpg"
+			},
+			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 47vh; width: 70vw; marginLeft: 15vw;" }]
+		},
+		{
+			"image": "t_yes.jpg",
+			"text": [{ "id": ["v"], "align": "center", "style": "bottom: 20vh;" }]
 		}
 	],
 	"desktop": [

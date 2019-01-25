@@ -109,6 +109,7 @@ ul {
 
 .large-img {
 	max-width: 1000px;
+	object-fit: center;
 }
 
 .shadow {
@@ -142,6 +143,14 @@ ul {
 		.gallery {
 			.txt-item {
 				font-size: 1.5em;
+			}
+		}
+	}
+
+	.hotels-holder {
+		.hotel-single {
+			img {
+				max-width: 42vw;
 			}
 		}
 	}

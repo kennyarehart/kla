@@ -5,10 +5,11 @@ import ProgressiveImage from 'react-progressive-image'
 import { TweenLite, TimelineMax } from 'gsap'
 import { rel } from '@ff0000-ad-tech/ad-utils/lib/MathUtils'
 import ReactHtmlParser from 'react-html-parser'
-import { getDomainKey, getDeviceKey } from '../js/utils'
+import { getDomainKey } from '../js/utils'
+import Device from '../js/fat/lib/Device'
 
 const path = './images/story/'
-const jsonImageNode = getDeviceKey()
+const jsonImageNode = Device.type
 const domainKey = getDomainKey()
 
 class Story extends Component {

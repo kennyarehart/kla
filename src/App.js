@@ -89,7 +89,7 @@ class App extends Component {
 			})
 		}
 		return (
-			<Router basename={'/'}>
+			<Router basename={'/_staging/'}>
 				<div className="App">
 					{header}
 					<div className="content-container">
