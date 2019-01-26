@@ -109,6 +109,7 @@ ul {
 
 .large-img {
 	max-width: 1000px;
+	object-fit: center;
 }
 
 .shadow {
@@ -131,9 +132,6 @@ ul {
 	}
 
 	.story {
-		button {
-			display: none;
-		}
 		.hitbox {
 			position: absolute;
 			width: 100vw;
@@ -142,6 +140,14 @@ ul {
 		.gallery {
 			.txt-item {
 				font-size: 1.5em;
+			}
+		}
+	}
+
+	.hotels-holder {
+		.hotel-single {
+			img {
+				max-width: 42vw;
 			}
 		}
 	}
@@ -189,9 +195,6 @@ ul {
 
 	/* _story */
 	.story {
-		button {
-			display: none;
-		}
 		.hitbox {
 			position: absolute;
 			width: 100vw;
@@ -203,4 +206,11 @@ ul {
 			}
 		}
 	}
+}
+
+.test {
+	position: absolute;
+	z-index: 9999;
+	color: #fff;
+	font-size: 3em;
 }

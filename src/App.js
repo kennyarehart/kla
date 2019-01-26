@@ -88,8 +88,9 @@ class App extends Component {
 				return <Route exact path={item.path} component={dynamicClass(item.class)} key={item.label} />
 			})
 		}
+		//basename={'/_staging/'}
 		return (
-			<Router basename={'/'}>
+			<Router>
 				<div className="App">
 					{header}
 					<div className="content-container">

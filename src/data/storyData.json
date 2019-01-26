@@ -2,14 +2,8 @@
 	"mobile": [
 		{
 			"image": {
-				"alk": {
-					"large": "m_standing_open.jpg",
-					"thumb": "m_standing_open__thumb.jpg"
-				},
-				"kla": {
-					"large": "m_hop_on_back.jpg",
-					"thumb": "m_hop_on_back__thumb.jpg"
-				}
+				"alk": "m_standing_open.jpg",
+				"kla": "m_hop_on_back.jpg"
 			},
 			"text": [
 				{ "id": ["a"], "align": "center", "style": "top:14vh;" },
@@ -24,16 +18,16 @@
 			]
 		},
 		{
-			"text": [{ "id": ["f"], "align": "center", "style": "top: 6vh" }],
 			"image": {
-				"alk": { "large": "m_standing_embraced.jpg", "thumb": "m_standing_embraced__thumb.jpg" },
-				"kla": { "large": "m_timber.jpg", "thumb": "m_timber__thumb.jpg" }
-			}
+				"alk": "m_standing_embraced.jpg",
+				"kla": "m_timber.jpg"
+			},
+			"text": [{ "id": ["f"], "align": "center", "style": "top: 6vh" }]
 		},
 		{
 			"image": {
-				"alk": { "large": "m_tulip.jpg", "thumb": "m_tulip__thumb.jpg" },
-				"kla": { "large": "m_nola.jpg", "thumb": "m_nola__thumb.jpg" }
+				"alk": "m_tulip.jpg",
+				"kla": "m_nola.jpg"
 			},
 			"text": [
 				{ "id": ["g", "h"], "align": "center", "style": "top: 6vh" },
@@ -45,15 +39,15 @@
 		},
 		{
 			"image": {
-				"alk": { "large": "m_coast.jpg", "thumb": "m_coast__thumb.jpg" },
-				"kla": { "large": "m_eiffle.jpg", "thumb": "m_eiffle__thumb.jpg" }
+				"alk": "m_coast.jpg",
+				"kla": "m_eiffle.jpg"
 			},
 			"text": [{ "id": ["l"], "align": "right", "style": "top: 6vh; width: 60vw; right: 0" }]
 		},
 		{
 			"image": {
-				"kla": { "large": "m_moveup_1.jpg", "thumb": "m_moveup_1__thumb.jpg" },
-				"alk": { "large": "m_moveup_2.jpg", "thumb": "m_moveup_2__thumb.jpg" }
+				"kla": "m_moveup_1.jpg",
+				"alk": "m_moveup_2.jpg"
 			},
 			"text": [
 				{ "id": ["m", "n"], "align": "center", "style": "bottom: 45vh;" },
@@ -66,8 +60,8 @@
 		},
 		{
 			"image": {
-				"kla": { "large": "m_indo_1.jpg", "thumb": "m_indo_1__thumb.jpg" },
-				"alk": { "large": "m_indo_2.jpg", "thumb": "m_indo_2__thumb.jpg" }
+				"kla": "m_indo_1.jpg",
+				"alk": "m_indo_2.jpg"
 			},
 			"text": [
 				{ "id": ["r"], "align": "left", "style": "top: 6vh;" },
@@ -76,21 +70,101 @@
 		},
 		{
 			"image": {
-				"alk": { "large": "m_ukulele_1.jpg", "thumb": "m_ukulele_1__thumb.jpg" },
-				"kla": { "large": "m_ukulele_2.jpg", "thumb": "m_ukulele_2__thumb.jpg" }
+				"alk": "m_ukulele_1.jpg",
+				"kla": "m_ukulele_2.jpg"
 			},
 			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 40vh;" }]
 		},
 		{
-			"image": { "large": "m_yes.jpg", "thumb": "m_yes__thumb.jpg" },
+			"image": "m_yes.jpg",
 			"text": [{ "id": ["v"], "align": "center", "style": "top: 14vh;" }]
+		}
+	],
+	"tablet": [
+		{
+			"image": {
+				"kla": "d_hop_on_back.jpg",
+				"alk": "d_standing_open.jpg"
+			},
+			"text": [
+				{ "id": ["a"], "align": "center", "style": "top:20vh;" },
+				{ "id": ["b", "c"], "align": "right", "style": "bottom:25vh" }
+			]
+		},
+
+		{
+			"text": [
+				{ "id": ["d"], "align": "left", "style": "top: 20vh; width: 40vw; left: 6vw" },
+				{ "id": ["e"], "align": "right", "style": "top: 62vh; right:6vw" }
+			]
+		},
+		{
+			"image": {
+				"alk": "d_falls.jpg",
+				"kla": "t_timber.jpg"
+			},
+			"text": [{ "id": ["f"], "align": "center", "style": "top: 20vh; width: 50vw; marginLeft: 16vw" }]
+		},
+		{
+			"image": {
+				"alk": "t_rice.jpg",
+				"kla": "t_coast_fr.jpg"
+			},
+			"text": [
+				{ "id": ["g", "h", "i"], "align": "left", "style": "bottom: 31vh; width: 42vw; marginLeft: 10vw;" }
+			]
+		},
+		{
+			"text": [
+				{
+					"id": ["j", "k", "br", "br", "l"],
+					"align": "left",
+					"style": "top: 35vh; width: 42vw; marginLeft: 10vw;"
+				}
+			]
+		},
+		{
+			"image": {
+				"kla": "d_moveup_1.jpg",
+				"alk": "d_moveup_2.jpg"
+			},
+			"text": [{ "id": ["m", "n", "o", "br", "br", "p"], "align": "center", "style": "top: 16vh;" }]
+		},
+		{
+			"text": [
+				{ "id": ["q", "q1", "q2"], "align": "center", "style": "top: 16vh; width: 70vw; marginLeft: 15vw" }
+			]
+		},
+		{
+			"image": {
+				"kla": "d_indo_1.jpg",
+				"alk": "t_indo_2.jpg"
+			},
+			"text": [
+				{
+					"id": ["r", "r2"],
+					"align": "center",
+					"style": "bottom: 25vh; width: 35vw; marginRight: 15vw; right: 0"
+				}
+			]
+		},
+		{
+			"image": {
+				"alk": "d_ukulele_1.jpg",
+				"kla": "d_ukulele_2.jpg"
+			},
+			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 47vh; width: 70vw; marginLeft: 15vw;" }]
+		},
+		{
+			"image": "t_yes.jpg",
+			"text": [{ "id": ["v"], "align": "center", "style": "bottom: 20vh;" }]
 		}
 	],
 	"desktop": [
 		{
 			"image": {
-				"kla": { "large": "d_hop_on_back.jpg", "thumb": "d_hop_on_back__thumb.jpg" },
-				"alk": { "large": "d_standing_open.jpg", "thumb": "d_standing_open__thumb.jpg" }
+				"kla": "d_hop_on_back.jpg",
+				"alk": "d_standing_open.jpg"
 			},
 			"text": [
 				{ "id": ["a"], "align": "center", "style": "top:14vh;" },
@@ -106,15 +180,15 @@
 		},
 		{
 			"image": {
-				"alk": { "large": "d_falls.jpg", "thumb": "d_falls__thumb.jpg" },
-				"kla": { "large": "d_timber.jpg", "thumb": "d_timber__thumb.jpg" }
+				"alk": "d_falls.jpg",
+				"kla": "d_timber.jpg"
 			},
 			"text": [{ "id": ["f"], "align": "center", "style": "top: 20vh; width: 50vw; marginLeft: 16vw" }]
 		},
 		{
 			"image": {
-				"alk": { "large": "d_rice.jpg", "thumb": "d_rice__thumb.jpg" },
-				"kla": { "large": "d_coast_fr.jpg", "thumb": "d_coast_fr__thumb.jpg" }
+				"alk": "d_rice.jpg",
+				"kla": "d_coast_fr.jpg"
 			},
 			"text": [
 				{ "id": ["g", "h", "i"], "align": "left", "style": "bottom: 31vh; width: 42vw; marginLeft: 18vw;" }
@@ -131,8 +205,8 @@
 		},
 		{
 			"image": {
-				"kla": { "large": "d_moveup_1.jpg", "thumb": "d_moveup_1__thumb.jpg" },
-				"alk": { "large": "d_moveup_2.jpg", "thumb": "d_moveup_2__thumb.jpg" }
+				"kla": "d_moveup_1.jpg",
+				"alk": "d_moveup_2.jpg"
 			},
 			"text": [
 				{ "id": ["m", "n", "o"], "align": "center", "style": "top: 16vh;" },
@@ -146,8 +220,8 @@
 		},
 		{
 			"image": {
-				"kla": { "large": "d_indo_1.jpg", "thumb": "d_indo_1__thumb.jpg" },
-				"alk": { "large": "d_indo_2.jpg", "thumb": "d_indo_2__thumb.jpg" }
+				"kla": "d_indo_1.jpg",
+				"alk": "d_indo_2.jpg"
 			},
 			"text": [
 				{
@@ -159,13 +233,13 @@
 		},
 		{
 			"image": {
-				"alk": { "large": "d_ukulele_1.jpg", "thumb": "d_ukulele_2__thumb.jpg" },
-				"kla": { "large": "d_ukulele_2.jpg", "thumb": "d_ukulele_2__thumb.jpg" }
+				"alk": "d_ukulele_1.jpg",
+				"kla": "d_ukulele_2.jpg"
 			},
 			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 47vh; width: 70vw; marginLeft: 15vw;" }]
 		},
 		{
-			"image": { "large": "d_engaged.jpg", "thumb": "d_engaged__thumb.jpg" },
+			"image": "d_engaged.jpg",
 			"text": [{ "id": ["v"], "align": "center", "style": "bottom: 12vh;" }]
 		}
 	],
