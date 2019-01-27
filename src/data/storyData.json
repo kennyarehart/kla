@@ -2,8 +2,8 @@
 	"mobile": [
 		{
 			"image": {
-				"alk": "m_standing_open.jpg",
-				"kla": "m_hop_on_back.jpg"
+				"alk": { "src": "m_standing_open.jpg" },
+				"kla": { "src": "m_hop_on_back.jpg" }
 			},
 			"text": [
 				{ "id": ["a"], "align": "center", "style": "top:14vh;" },
@@ -19,15 +19,15 @@
 		},
 		{
 			"image": {
-				"alk": "m_standing_embraced.jpg",
-				"kla": "m_timber.jpg"
+				"alk": { "src": "m_standing_embraced.jpg" },
+				"kla": { "src": "m_timber.jpg" }
 			},
 			"text": [{ "id": ["f"], "align": "center", "style": "top: 6vh" }]
 		},
 		{
 			"image": {
-				"alk": "m_tulip.jpg",
-				"kla": "m_nola.jpg"
+				"alk": { "src": "m_tulip.jpg" },
+				"kla": { "src": "m_nola.jpg" }
 			},
 			"text": [
 				{ "id": ["g", "h"], "align": "center", "style": "top: 6vh" },
@@ -39,15 +39,15 @@
 		},
 		{
 			"image": {
-				"alk": "m_coast.jpg",
-				"kla": "m_eiffle.jpg"
+				"alk": { "src": "m_coast.jpg" },
+				"kla": { "src": "m_eiffle.jpg" }
 			},
 			"text": [{ "id": ["l"], "align": "right", "style": "top: 6vh; width: 60vw; right: 0" }]
 		},
 		{
 			"image": {
-				"kla": "m_moveup_1.jpg",
-				"alk": "m_moveup_2.jpg"
+				"kla": { "src": "m_moveup_1.jpg" },
+				"alk": { "src": "m_moveup_2.jpg" }
 			},
 			"text": [
 				{ "id": ["m", "n"], "align": "center", "style": "bottom: 45vh;" },
@@ -60,8 +60,8 @@
 		},
 		{
 			"image": {
-				"kla": "m_indo_1.jpg",
-				"alk": "m_indo_2.jpg"
+				"kla": { "src": "m_indo_1.jpg" },
+				"alk": { "src": "m_indo_2.jpg" }
 			},
 			"text": [
 				{ "id": ["r"], "align": "left", "style": "top: 6vh;" },
@@ -70,28 +70,27 @@
 		},
 		{
 			"image": {
-				"alk": "m_ukulele_1.jpg",
-				"kla": "m_ukulele_2.jpg"
+				"alk": { "src": "m_ukulele_1.jpg" },
+				"kla": { "src": "m_ukulele_2.jpg" }
 			},
 			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 40vh;" }]
 		},
 		{
-			"image": "m_yes.jpg",
+			"image": { "src": "m_yes.jpg" },
 			"text": [{ "id": ["v"], "align": "center", "style": "top: 14vh;" }]
 		}
 	],
 	"tablet": [
 		{
 			"image": {
-				"kla": "d_hop_on_back.jpg",
-				"alk": "d_standing_open.jpg"
+				"kla": { "src": "d_hop_on_back.jpg" },
+				"alk": { "src": "d_standing_open.jpg" }
 			},
 			"text": [
 				{ "id": ["a"], "align": "center", "style": "top:20vh;" },
 				{ "id": ["b", "c"], "align": "right", "style": "bottom:25vh" }
 			]
 		},
-
 		{
 			"text": [
 				{ "id": ["d"], "align": "left", "style": "top: 20vh; width: 40vw; left: 6vw" },
@@ -100,15 +99,15 @@
 		},
 		{
 			"image": {
-				"alk": "d_falls.jpg",
-				"kla": "t_timber.jpg"
+				"alk": { "src": "d_falls.jpg" },
+				"kla": { "src": "t_timber.jpg" }
 			},
 			"text": [{ "id": ["f"], "align": "center", "style": "top: 20vh; width: 50vw; marginLeft: 16vw" }]
 		},
 		{
 			"image": {
-				"alk": "t_rice.jpg",
-				"kla": "t_coast_fr.jpg"
+				"alk": { "src": "t_rice.jpg" },
+				"kla": { "src": "t_coast_fr.jpg" }
 			},
 			"text": [
 				{ "id": ["g", "h", "i"], "align": "left", "style": "bottom: 31vh; width: 42vw; marginLeft: 10vw;" }
@@ -125,8 +124,8 @@
 		},
 		{
 			"image": {
-				"kla": "d_moveup_1.jpg",
-				"alk": "d_moveup_2.jpg"
+				"kla": { "src": "d_moveup_1.jpg" },
+				"alk": { "src": "d_moveup_2.jpg" }
 			},
 			"text": [{ "id": ["m", "n", "o", "br", "br", "p"], "align": "center", "style": "top: 16vh;" }]
 		},
@@ -137,8 +136,8 @@
 		},
 		{
 			"image": {
-				"kla": "d_indo_1.jpg",
-				"alk": "t_indo_2.jpg"
+				"kla": { "src": "d_indo_1.jpg" },
+				"alk": { "src": "t_indo_2.jpg" }
 			},
 			"text": [
 				{
@@ -150,24 +149,24 @@
 		},
 		{
 			"image": {
-				"alk": "d_ukulele_1.jpg",
-				"kla": "d_ukulele_2.jpg"
+				"alk": { "src": "d_ukulele_1.jpg" },
+				"kla": { "src": "d_ukulele_2.jpg" }
 			},
 			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 47vh; width: 70vw; marginLeft: 15vw;" }]
 		},
 		{
-			"image": "t_yes.jpg",
+			"image": { "src": "t_yes.jpg" },
 			"text": [{ "id": ["v"], "align": "center", "style": "bottom: 20vh;" }]
 		}
 	],
 	"desktop": [
 		{
 			"image": {
-				"kla": "d_hop_on_back.jpg",
-				"alk": "d_standing_open.jpg"
+				"kla": { "src": "d_hop_on_back.jpg" },
+				"alk": { "src": "d_standing_open.jpg", "pos": "top" }
 			},
 			"text": [
-				{ "id": ["a"], "align": "center", "style": "top:14vh;" },
+				{ "id": ["a"], "align": "center", "style": "top:18vh;" },
 				{ "id": ["b", "c"], "align": "right", "style": "bottom:35vh" }
 			]
 		},
@@ -180,15 +179,15 @@
 		},
 		{
 			"image": {
-				"alk": "d_falls.jpg",
-				"kla": "d_timber.jpg"
+				"alk": { "src": "d_falls.jpg", "pos": "60% 60%" },
+				"kla": { "src": "d_timber.jpg", "pos": "90% 40%" }
 			},
 			"text": [{ "id": ["f"], "align": "center", "style": "top: 20vh; width: 50vw; marginLeft: 16vw" }]
 		},
 		{
 			"image": {
-				"alk": "d_rice.jpg",
-				"kla": "d_coast_fr.jpg"
+				"alk": { "src": "d_rice.jpg", "pos": "60% 23%" },
+				"kla": { "src": "d_coast_fr.jpg" }
 			},
 			"text": [
 				{ "id": ["g", "h", "i"], "align": "left", "style": "bottom: 31vh; width: 42vw; marginLeft: 18vw;" }
@@ -205,23 +204,23 @@
 		},
 		{
 			"image": {
-				"kla": "d_moveup_1.jpg",
-				"alk": "d_moveup_2.jpg"
+				"kla": { "src": "d_moveup_1.jpg", "pos": "37% 66%" },
+				"alk": { "src": "d_moveup_2.jpg", "pos": "37% 66%" }
 			},
 			"text": [
-				{ "id": ["m", "n", "o"], "align": "center", "style": "top: 16vh;" },
+				{ "id": ["m", "n", "o"], "align": "center", "style": "top: 18vh;" },
 				{ "id": ["p"], "align": "right", "style": "bottom: 10vh; width: 30vw; right: 6vw" }
 			]
 		},
 		{
 			"text": [
-				{ "id": ["q", "q1", "q2"], "align": "center", "style": "top: 16vh; width: 70vw; marginLeft: 15vw" }
+				{ "id": ["q", "q1", "q2"], "align": "center", "style": "top: 18vh; width: 70vw; marginLeft: 15vw" }
 			]
 		},
 		{
 			"image": {
-				"kla": "d_indo_1.jpg",
-				"alk": "d_indo_2.jpg"
+				"alk": { "src": "d_indo_2.jpg", "pos": "32% 50%" },
+				"kla": { "src": "d_indo_1.jpg", "pos": "32% 5%" }
 			},
 			"text": [
 				{
@@ -233,13 +232,13 @@
 		},
 		{
 			"image": {
-				"alk": "d_ukulele_1.jpg",
-				"kla": "d_ukulele_2.jpg"
+				"alk": { "src": "d_ukulele_1.jpg", "pos": "61% 35%" },
+				"kla": { "src": "d_ukulele_2.jpg", "pos": "39% 30%" }
 			},
 			"text": [{ "id": ["s", "t", "u"], "align": "center", "style": "top: 47vh; width: 70vw; marginLeft: 15vw;" }]
 		},
 		{
-			"image": "d_engaged.jpg",
+			"image": { "src": "d_engaged.jpg", "pos": "41% 50%" },
 			"text": [{ "id": ["v"], "align": "center", "style": "bottom: 12vh;" }]
 		}
 	],
@@ -263,7 +262,7 @@
 			"alk": "I decided to be bold & text Kenny. With the sentiment of a "
 		},
 		"i": "question in statement form:<br>\"Hey, we should get drinks sometime.\"",
-		"j": "A spark ignited. We knew this special, ",
+		"j": "A spark ignited. We knew this was special, ",
 		"k": {
 			"kla": "but I was getting ready to move to Oregon.",
 			"alk": "but Kenny was getting ready to move to Oregon."

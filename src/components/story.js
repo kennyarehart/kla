@@ -237,14 +237,20 @@ class Story extends Component {
 					if (hasSubDomain) {
 						img = img[domainKey]
 					}
+					// get the src
+					const source = img.src
 					//
-					const thumb = img.replace('.', '__thumb.')
+					const thumb = source.replace('.', '__thumb.')
 					//
 					child = (
-						<ProgressiveImage src={path + img} placeholder={path + thumb}>
-							{(src, loading) => {
-								return <img style={{ opacity: loading ? 0.4 : 1 }} src={src} />
-							}}
+						<ProgressiveImage src={path + source} placeholder={path + thumb}>
+							{function(src, loading) {
+								let style = { opacity: loading ? 0.4 : 1 }
+								console.warn(this)
+								// get optional object-position params
+								if (this.pos) style.objectPosition = this.pos
+								return <img style={style} src={src} />
+							}.bind(img)}
 						</ProgressiveImage>
 					)
 				}
