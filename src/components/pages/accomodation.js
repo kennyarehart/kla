@@ -30,8 +30,8 @@ class Accomodation extends Section {
 						Both hotels are just a quick 15 min ride away from the venue and located close to each other.
 						<br />
 						<b>NOTE:</b> The Columbia River Gorge is a <i>very</i> popular location for summer weddings,
-						camping, and concertes at Edgefield just down the road. We have a certain number of rooms
-						blocked out but beyond that things will book very quickly.
+						camping, and concerts at Edgefield just down the road. We have a certain number of rooms blocked
+						out but beyond that things will book very quickly.
 					</p>
 				</div>
 				<div>
