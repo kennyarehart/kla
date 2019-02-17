@@ -24,10 +24,10 @@ class Accomodation extends Section {
 				<div className="buffered-content">
 					<h2>Accommodations</h2>
 					<p className="multi max-wide end-capped">
-						We've reserved group rates at the two below hotels. Just mention{' '}
+						We've reserved group rates at the {accomodationData.reserved[0].name}. Just mention{' '}
 						<span className="wedding-name">"Weber/Arehart Wedding"</span> when booking.
 						<br />
-						Both hotels are just a quick 15 min ride away from the venue and located close to each other.
+						The hotel is just a quick 15 min ride away from the venue.
 						<br />
 						<b>NOTE:</b> The Columbia River Gorge is a <i>very</i> popular location for summer weddings,
 						camping, and concerts at Edgefield just down the road. We have a certain number of rooms blocked
