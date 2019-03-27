@@ -7,3 +7,9 @@ export function getDomainKey() {
 export function getDeviceKey() {
 	return Device.type === 'mobile' ? 'mobile' : 'desktop'
 }
+
+export function getHeaderText() {
+	const pool = ['Kenny Arehart', 'Ashley Weber']
+	if (getDomainKey() === 'alk') pool.reverse()
+	return pool.join(Device.type === 'mobile' ? ' +<br>' : ' + ')
+}

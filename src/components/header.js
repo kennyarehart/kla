@@ -5,14 +5,12 @@ import Device from '../js/fat/lib/Device'
 import ScrollWatcher from '../js/ScrollWatcher'
 import GlobalManager from '../js/GlobalManager'
 import sectionData from '../data/sectionData.json'
-import headerData from '../data/headerData.json'
-import { getDomainKey, getDeviceKey } from '../js/utils'
+import { getHeaderText } from '../js/utils'
 
 class Header extends Component {
 	constructor(props) {
 		super(props)
-		const jsonVal = headerData[getDomainKey()][getDeviceKey()]
-		this.txt = ReactHtmlParser(jsonVal)
+		this.txt = ReactHtmlParser(getHeaderText())
 	}
 
 	// deprecated. Find alt solution later
