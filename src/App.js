@@ -8,7 +8,6 @@ import WhenWhere from './components/pages/whenwhere'
 import Accomodation from './components/pages/accomodation'
 import Registry from './components/pages/registry'
 import InTown from './components/pages/in-town'
-import Gallery from './components/pages/gallery'
 import InfiniteScroll from 'react-infinite-scroller'
 import Device from './js/fat/lib/Device'
 import sectionData from './data/sectionData.json'
@@ -16,7 +15,7 @@ import ScrollWatcher from './js/ScrollWatcher'
 
 console.log(styles)
 
-const classes = { Homepage, WhenWhere, Accomodation, Registry, InTown, Gallery }
+const classes = { Homepage, WhenWhere, Accomodation, Registry, InTown }
 function dynamicClass(name) {
 	return classes[name]
 }

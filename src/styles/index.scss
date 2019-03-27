@@ -16,6 +16,7 @@ $textShadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
 @import 'whenwhere';
 @import 'story';
 @import 'accomodations';
+@import 'intown';
 
 body {
 	font-family: 'Special Elite', cursive;
@@ -209,6 +210,14 @@ ul {
 			top: 40vw;
 			width: 30vw;
 			margin-left: 16vw;
+		}
+	}
+
+	/* _intown */
+	.intown-section {
+		.single-holder {
+			white-space: nowrap;
+			overflow: scroll;
 		}
 	}
 }

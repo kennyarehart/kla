@@ -14,23 +14,18 @@
 			"label": "Accomodations",
 			"class": "Accomodation",
 			"path": "/accomodation"
-		}
-	],
-	"disabled": [
+		},
 		{
 			"label": "Fun in Oregon",
 			"class": "InTown",
 			"path": "/in-town"
-		},
+		}
+	],
+	"disabled": [
 		{
 			"label": "Registry",
 			"class": "Registry",
 			"path": "/registry"
-		},
-		{
-			"label": "Gallery",
-			"class": "Gallery",
-			"path": "/gallery"
 		}
 	]
 }

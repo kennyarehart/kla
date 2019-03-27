@@ -2,7 +2,6 @@ import React from 'react'
 import accomodationData from '../../data/accomodationData.json'
 import Section from '../Section'
 // import ProgressiveImage from 'react-progressive-image'
-// import ImgRow from '../img-row'
 
 const path = './images/hotel/'
 
