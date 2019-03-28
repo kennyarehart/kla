@@ -13,3 +13,7 @@ export function getHeaderText() {
 	if (getDomainKey() === 'alk') pool.reverse()
 	return pool.join(Device.type === 'mobile' ? ' +<br>' : ' + ')
 }
+
+export function getThumb(str) {
+	return str.replace('.', '__thumb.')
+}

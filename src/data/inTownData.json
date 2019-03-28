@@ -1,106 +1,124 @@
-[
-	{
-		"title": "Around Portland",
-		"desc": "Grab a Nike bike or share scooter to zip around town. Head down to the waterfront for a stroll along the river. Also, there is always an event: the Saturday Market, a 5k, concert or beer tasting event. Next, visit the smallest park in the world: Mill Ends.",
-		"image": "waterfront.jpg",
-		"list": [
-			"Tom McCall Waterfront Park",
-			"Saturday Market",
-			"Powell's Bookstore",
-			"Mill Ends Park",
-			"OMSI",
-			"Northwest Children's Theatre"
-		]
-	},
-	{
-		"title": "Washington Park",
-		"desc": "Easily accessible from the Metro, great location with tons of fun options for all ages!",
-		"list": [
-			"Oregon Zoo",
-			"Children’s museum",
-			"International Rose Test Garden",
-			"Japanese Garden",
-			"Forest Park trail heads",
-			"World Forestry Center"
-		]
-	},
-	{
-		"title": "Forest Park",
-		"desc": "One of the country's largest urban forest reserves, with 70 miles of trails: open paved and smaller winding options, biking, casual walking, dog friendly. Head to Pittock mansion for a great view of the city",
-		"image": "pittock.jpg",
-		"list": ["Hiking", "Pittock Mansion", "Witches Castle"]
-	},
-	{
-		"title": "Food",
-		"desc": "There really are too many great places to list them all. Make sure to hit a Food Cart cluster; a Portland staple.",
-		"list": [
-			"Food Carts everywhere!",
-			"McMenamins Barley Mill",
-			"Little Big Burger",
-			"Grand Central Bakery",
-			"Elephants",
-			"PorQue No",
-			"Pok Pok",
-			"13 Virtues (philly cheesesteaks!)",
-			"Ringside Steakhouse",
-			"Portland City Grill (rooftop view)"
-		]
-	},
-	{
-		"title": "Brunch",
-		"desc": "One of the most popular events in Portland. Expect a long wait pretty much anywhere after 10am so get there a little early. Our personal favorite is Mother's. For the kids, head to Slappy Cakes to make your own pancakes right at your table!",
-		"image": "mothers.jpg",
-		"list": [
-			"Mother's Bistro",
-			"Jam on Hawthorne",
-			"Pine State Biscuits",
-			"Iindustrial Cafe",
-			"Slappy Cakes",
-			"Off the Waffle"
-		]
-	},
-	{
-		"title": "Dessert",
-		"desc": "Crazy donuts to fancy ice cream, or get a Spanish coffee in a speakeasy motif at Huber's",
-		"image": "voodoo.jpg",
-		"list": ["Voodoo Doughnuts", "Blue Star Donuts", "Salt & Straw", "Ruby Jewel", "Huber’s"]
-	},
-	{
-		"title": "Beer & Bars",
-		"desc": "Breweries & tap rooms are plentiful. Make sure to make it to both sides of the river as there are great locations all over. Note that these locations also have great food menus and are kid friendly.",
-		"image": "10barrel.jpg",
-		"list": [
-			"Rogue/Rogue East",
-			"Deschutes",
-			"10 barrel",
-			"Basecamp",
-			"Ex Novo",
-			"Widmer",
-			"Level Beer",
-			"Stammich/Prost!",
-			"Departure rooftop bar",
-			"A Roadside Attraction"
-		]
-	},
-	{
-		"title": "Wine",
-		"desc": "Head out to the Willamette Valley for wine tasting or visit these bars/tasting rooms around town",
-		"list": ["Coopers Hall", "Hip Chicks Do Wine", "Clay Pigeon", "ENSO", "Boedecker Cellars", "Portland Wine Bar"]
-	},
-	{
-		"title": "Spirits",
-		"list": ["New Deal Distillery", "Eastside Distillery", "Edgefield Distillery"]
-	},
-	{
-		"title": "Day/Short Trips",
-		"desc": "Places to see/visit for a day trip or have an over night stay.",
-		"image": "craterlake.jpg",
-		"list": ["Multnomah Falls", "Columbia River Gorge", "Silver Falls State Park", "Mt Hood", "Bend", "Crater Lake"]
-	},
-	{
-		"title": "Sports",
-		"desc": "Check for home games while you're in town.",
-		"image": "timbers.jpg",
-		"list": ["Timbers", "Portland Pickles", "Hillsboro Hops"]
-	}
-]
+{
+	"title": "While in Oregon",
+	"desc": "These are our recommendations & top picks of things to see, eat, drink & experience in/around Portland on your stay.",
+	"list": [
+		{
+			"title": "Around Portland",
+			"desc": "Grab a Nike bike or share scooter to zip around town. Head down to the waterfront for a stroll along the river. There is always an event on the waterfront: the Saturday Market, a 5/10k, concert, or beer tasting event. Also, visit the smallest park in the world: Mill Ends.",
+			"image": "waterfront.jpg",
+			"list": [
+				"Tom McCall Waterfront Park",
+				"Saturday Market",
+				"Powell's Bookstore",
+				"Mill Ends Park",
+				"OMSI",
+				"Northwest Children's Theatre"
+			]
+		},
+		{
+			"title": "Washington Park",
+			"desc": "Easily accessible from the Metro. A great location with tons of fun options for all ages!",
+			"list": [
+				"Oregon Zoo",
+				"Children’s museum",
+				"International Rose Test Garden",
+				"Japanese Garden",
+				"Forest Park trail heads",
+				"World Forestry Center"
+			]
+		},
+		{
+			"title": "Forest Park",
+			"desc": "One of the country's largest urban forest reserves. There are over 70 miles of trails: open paved & smaller winding options, biking, casual walking & dog friendly. Head to Pittock mansion for a great view of the city!",
+			"image": "pittock.jpg",
+			"list": ["Hiking", "Pittock Mansion", "Witches Castle"]
+		},
+		{
+			"title": "Food",
+			"desc": "There really are too many great places to list them all. Make sure to hit a Food Cart cluster, a Portland staple.",
+			"list": [
+				"Food Carts everywhere!",
+				"McMenamins Barley Mill",
+				"Little Big Burger",
+				"Grand Central Bakery",
+				"Elephants",
+				"PorQue No",
+				"Pok Pok",
+				"13 Virtues (philly cheesesteaks)",
+				"Ringside Steakhouse",
+				"Portland City Grill (rooftop view)"
+			]
+		},
+		{
+			"title": "Brunch",
+			"desc": "One of the most popular events in Portland. Expect a long wait pretty much anywhere after 10am so get there a little early. Our personal favorite is Mother's. For the kids, head to Slappy Cakes to make your own pancakes right at your table!",
+			"image": "mothers.jpg",
+			"list": [
+				"Mother's Bistro",
+				"Jam on Hawthorne",
+				"Pine State Biscuits",
+				"Industrial Cafe",
+				"Slappy Cakes",
+				"Off the Waffle"
+			]
+		},
+		{
+			"title": "Dessert",
+			"desc": "Crazy donuts to fancy ice cream, or get a Spanish coffee in a speakeasy motif at Huber's.",
+			"image": "voodoo.jpg",
+			"list": ["Voodoo Doughnuts", "Blue Star Donuts", "Salt & Straw", "Ruby Jewel", "Huber’s"]
+		},
+		{
+			"title": "Beer & Bars",
+			"desc": "Breweries & tap rooms are plentiful on both sides of the river. Note that these locations also have great food menus & are kid friendly.",
+			"image": "10barrel.jpg",
+			"list": [
+				"Rogue/Rogue East",
+				"Deschutes",
+				"10 barrel",
+				"Basecamp",
+				"Ex Novo",
+				"Widmer",
+				"Level Beer",
+				"Stammich/Prost!",
+				"Departure rooftop bar",
+				"A Roadside Attraction"
+			]
+		},
+		{
+			"title": "Wine",
+			"desc": "Head out to the Willamette Valley for wine tasting or visit these bars/tasting rooms around town:",
+			"list": [
+				"Coopers Hall",
+				"Hip Chicks Do Wine",
+				"Boedecker Cellars",
+				"Clay Pigeon",
+				"ENSO",
+				"Portland Wine Bar"
+			]
+		},
+		{
+			"title": "Spirits",
+			"list": ["New Deal Distillery", "Eastside Distillery", "Edgefield Distillery"]
+		},
+		{
+			"title": "Day/Short Trips",
+			"desc": "Places to see/visit for a day trip or have an over night stay.",
+			"image": "craterlake.jpg",
+			"list": [
+				"Multnomah Falls",
+				"Columbia River Gorge",
+				"Silver Falls State Park",
+				"Mt. Hood",
+				"Bend",
+				"Crater Lake"
+			]
+		},
+		{
+			"title": "Sports",
+			"desc": "Check for home games while you're in town.",
+			"image": "timbers.jpg",
+			"list": ["Timbers", "Portland Pickles", "Hillsboro Hops"]
+		}
+	]
+}

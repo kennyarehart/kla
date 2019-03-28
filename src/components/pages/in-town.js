@@ -1,6 +1,7 @@
 import React from 'react'
 import inTownData from '../../data/inTownData.json'
 import Section from '../Section'
+import { getThumb } from '../../js/utils'
 
 const path = './images/intown/'
 
@@ -17,7 +18,7 @@ export default class InTown extends Section {
 
 	addImage(o) {
 		if (o.image) {
-			const thumb = o.image.replace('.', '__thumb.')
+			const thumb = getThumb(o.image)
 			return <img src={path + o.image} className="large-img shadow" alt={thumb} />
 		}
 	}
@@ -32,14 +33,11 @@ export default class InTown extends Section {
 		return (
 			<div className="accomodations-page" ref={div => (this.scrollRef = div)}>
 				<div className="buffered-content">
-					<h2>While in Oregon</h2>
-					<p className="multi max-wide end-capped">
-						Our recommendations and top picks of things to see, eat, drink, & experience in/around Portland
-						on your stay.
-					</p>
+					<h2>{inTownData.title}</h2>
+					<p className="multi max-wide end-capped">{inTownData.desc}</p>
 				</div>
 				<div className="intown-section end-capped max-wide">
-					{inTownData.map((o, i) => {
+					{inTownData.list.map((o, i) => {
 						return (
 							<div key={i} className="intown-single">
 								<h3>{o.title}</h3>
