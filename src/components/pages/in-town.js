@@ -31,7 +31,7 @@ export default class InTown extends Section {
 
 	render() {
 		return (
-			<div className="accomodations-page" ref={div => (this.scrollRef = div)}>
+			<div className="intown-page" ref={div => (this.scrollRef = div)}>
 				<div className="buffered-content">
 					<h2>{inTownData.title}</h2>
 					<p className="multi max-wide end-capped">{inTownData.desc}</p>

@@ -17,6 +17,7 @@ $textShadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
 @import 'story';
 @import 'accomodations';
 @import 'intown';
+@import 'registry';
 
 body {
 	font-family: 'Special Elite', cursive;
@@ -38,7 +39,9 @@ body,
 
 /* .content-container, <-- messes up story gallery */
 .when-where-page,
-.accomodations-page {
+.accomodations-page,
+.intown-page,
+.registry-page {
 	text-align: center;
 }
 

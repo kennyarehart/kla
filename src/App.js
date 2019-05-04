@@ -16,9 +16,7 @@ import ScrollWatcher from './js/ScrollWatcher'
 console.log(styles)
 
 const classes = { Homepage, WhenWhere, Accomodation, Registry, InTown }
-function dynamicClass(name) {
-	return classes[name]
-}
+const dynamicClass = name => classes[name]
 
 class App extends Component {
 	constructor(props) {
