@@ -14,23 +14,17 @@
 			"label": "Accomodations",
 			"class": "Accomodation",
 			"path": "/accomodation"
-		}
-	],
-	"disabled": [
-		{
-			"label": "Fun in Oregon",
-			"class": "InTown",
-			"path": "/in-town"
 		},
 		{
 			"label": "Registry",
 			"class": "Registry",
+			"url": "https://www.myregistry.com/wedding-registry/Kenny-Arehart-and-Ashley-Weber-Milwaukie-OR/1900825",
 			"path": "/registry"
 		},
 		{
-			"label": "Gallery",
-			"class": "Gallery",
-			"path": "/gallery"
+			"label": "Fun in Oregon",
+			"class": "InTown",
+			"path": "/in-town"
 		}
 	]
 }

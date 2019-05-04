@@ -35,11 +35,19 @@ class Header extends Component {
 
 	createLinks() {
 		return sectionData.active.map((val, i) => {
-			return (
-				<Link to={val.path} key={i}>
-					{val.label}
-				</Link>
-			)
+			if (val.url) {
+				return (
+					<a href={val.url} target="_blank" key={i}>
+						{val.label}
+					</a>
+				)
+			} else {
+				return (
+					<Link to={val.path} key={i}>
+						{val.label}
+					</Link>
+				)
+			}
 		})
 	}
 

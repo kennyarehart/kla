@@ -1,26 +1,17 @@
-import React, { Component } from 'react'
 import storyData from '../data/storyData.json'
-import ProgressiveImage from 'react-progressive-image'
 import { TweenLite, TimelineMax } from 'gsap'
 import { rel } from '@ff0000-ad-tech/ad-utils/lib/MathUtils'
-import ReactHtmlParser from 'react-html-parser'
-import { getDomainKey } from '../js/utils'
 import Device from '../js/fat/lib/Device'
 
-const path = './images/story/'
 const jsonImageNode = Device.type
-const domainKey = getDomainKey()
 
-class Story extends Component {
+export default class SideScroller {
 	constructor(props) {
-		super(props)
 		const T = this
 		T.state = {
 			image: props.placeholder,
 			current: 1
 		}
-		T.galleryRef = null
-		T.storyRef = null
 		T.btnNextRef = null
 		T.btnPrevRef = null
 
@@ -218,115 +209,4 @@ class Story extends Component {
 			T.settle(0.8, percent)
 		}
 	}
-
-	render() {
-		// console.log(`${Array(25).join('-')} RENDER ${Array(25).join('-')}`)
-		// console.log(this.state)
-		const images = []
-		const texts = []
-		// console.warn(this.state.current, storyData.length)
-		for (let i = 0; i < storyData[jsonImageNode].length; i++) {
-			const jsonAt = storyData[jsonImageNode][i]
-			if (jsonAt.image) {
-				let img = jsonAt.image
-				let child = null
-				// this will add the progressive image, perhaps mod to pass in a "load" param so the thumb is there for sure?
-				if (i < this.state.current) {
-					// check for different domain versions first:
-					const hasSubDomain = img['alk'] !== undefined
-					if (hasSubDomain) {
-						img = img[domainKey]
-					}
-					// get the src
-					const source = img.src
-					//
-					const thumb = source.replace('.', '__thumb.')
-					//
-					child = (
-						<ProgressiveImage src={path + source} placeholder={path + thumb}>
-							{function(src, loading) {
-								let style = { opacity: loading ? 0.4 : 1 }
-								console.warn(this)
-								// get optional object-position params
-								if (this.pos) style.objectPosition = this.pos
-								return <img style={style} src={src} alt="" />
-							}.bind(img)}
-						</ProgressiveImage>
-					)
-				}
-				images.push(
-					<div className="img-item" key={i} ref={div => this.tl_images.push(div)}>
-						{child}
-					</div>
-				)
-			}
-			if (jsonAt.text) {
-				const txt = jsonAt.text
-				texts.push(
-					<div ref={div => this.tl_texts.push(div)} className="txt-item" key={'txt-item' + i}>
-						{txt.map((obj, k) => {
-							// check for class for alignment
-							const c = obj.align || ''
-							// check for style (offset)
-							const hasStyle = obj.style || null
-							let style = {}
-							if (hasStyle) {
-								const split = hasStyle.split(/\s?;\s?/g)
-								split.forEach(item => {
-									const [key, val] = item.split(':')
-									if (val !== undefined) {
-										style[key] = val
-									}
-								})
-							}
-
-							let txt = ''
-							obj.id.forEach(val => {
-								let lookup = storyData.full[val]
-								// check if text is an Object first: use domain based key
-								if (typeof lookup !== 'string') {
-									lookup = lookup[domainKey]
-								}
-
-								txt += lookup
-							})
-
-							return (
-								<div key={i + '-' + k} className={c} style={style}>
-									<div>{ReactHtmlParser(txt)}</div>
-								</div>
-							)
-						})}
-					</div>
-				)
-			}
-		}
-		const prevTxt = '<<'
-		const nextTxt = '>>'
-
-		return (
-			<div className="story" ref={div => (this.storyRef = div)}>
-				<div className="gallery" ref={div => (this.galleryRef = div)}>
-					{images}
-				</div>
-				<div
-					className="gallery"
-					ref={div => {
-						this.wordsRef = div
-					}}
-				>
-					{texts}
-				</div>
-				<div className="hitbox" ref={div => (this.hitbox = div)} />
-				<button className="prev story-btn-disable" ref={div => (this.btnPrevRef = div)}>
-					{prevTxt}
-				</button>
-				<button className="next" ref={div => (this.btnNextRef = div)}>
-					{nextTxt}
-				</button>
-			</div>
-		)
-	}
 }
-
-export default Story

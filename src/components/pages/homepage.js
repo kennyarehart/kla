@@ -4,11 +4,7 @@ import Section from '../Section'
 
 class Homepage extends Section {
 	render() {
-		return (
-			<div className="home-page">
-				<Story />
-			</div>
-		)
+		return <Story />
 	}
 }
 

@@ -1,0 +1,16 @@
+.intown-section {
+	img {
+		max-width: 100%;
+	}
+	.single-desc {
+		padding-top: 1em;
+	}
+	.single-chunk {
+		display: inline-block;
+		white-space: initial;
+		padding: 1em;
+		max-width: 75vw;
+		vertical-align: top;
+		color: $colorLight;
+	}
+}
